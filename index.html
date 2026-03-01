@@ -15,649 +15,16 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Fabian Ternis - Laravel Developer | pleasehireme.eu">
     <meta name="twitter:description" content="Fabian Ternis - Laravel Developer, Web Enthusiast, and Problem Solver. Owner of XPsystems.eu and europehost.eu">
-    <style>
-        /* Basic Reset & Variables */
-        :root {
-            --primary: #3b82f6;
-            --primary-dark: #2563eb;
-            --secondary: #8b5cf6;
-            --text-main: #1f2937;
-            --text-muted: #6b7280;
-            --bg-light: #f9fafb;
-            --bg-card: #ffffff;
-            --border-color: #e5e7eb;
-            --nav-bg: rgba(255, 255, 255, 0.9);
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-
-        .dark {
-            --primary: #60a5fa;
-            --primary-dark: #3b82f6;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --bg-light: #0f172a;
-            --bg-card: #1e293b;
-            --border-color: #334155;
-            --nav-bg: rgba(15, 23, 42, 0.9);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-main);
-            line-height: 1.5;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        /* Utility Classes */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        /* Navigation */
-        #navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 50;
-            padding: 1rem;
-            transition: all 0.3s;
-            background: transparent;
-        }
-
-        #navbar.scrolled {
-            background: var(--nav-bg);
-            backdrop-filter: blur(12px);
-            box-shadow: var(--shadow);
-        }
-
-        #navbar .nav-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 768px;
-            margin: 0 auto;
-            background: var(--bg-card);
-            border-radius: 9999px;
-            padding: 0.5rem 1rem;
-            box-shadow: var(--shadow);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .nav-link {
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.875rem;
-            color: var(--text-muted);
-            transition: all 0.3s;
-        }
-
-        .nav-link:hover, .nav-link.active {
-            background: var(--primary);
-            color: white;
-        }
-
-        .nav-buttons {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-left: 1rem;
-        }
-
-        #mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-            color: var(--text-main);
-        }
-
-        #theme-toggle {
-            background: var(--bg-light);
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            transition: background 0.3s;
-        }
-
-        #theme-toggle:hover {
-            background: var(--border-color);
-        }
-
-        /* Mobile Menu */
-        #mobile-menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--nav-bg);
-            backdrop-filter: blur(12px);
-            z-index: 40;
-            transform: translateX(-100%);
-            transition: transform 0.3s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        #mobile-menu.open {
-            transform: translateX(0);
-        }
-
-        .mobile-nav-link {
-            font-size: 1.5rem;
-            font-weight: 500;
-            text-decoration: none;
-            color: var(--text-main);
-        }
-
-        /* Sections */
-        section {
-            padding: 5rem 1rem;
-        }
-
-        section:nth-child(even) {
-            background: var(--bg-card);
-        }
-
-        h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(to right, #3b82f6, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        h2 {
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        /* Home Section */
-        #home {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        #home .content {
-            text-align: center;
-            z-index: 10;
-        }
-
-        #home .subtitle {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.75rem 2rem;
-            background: var(--primary);
-            color: white;
-            border-radius: 9999px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* About Section */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        @media (min-width: 768px) {
-            .about-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            color: var(--text-muted);
-        }
-
-        .about-text a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .about-text a:hover {
-            text-decoration: underline;
-        }
-
-        .profile-circle {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .profile-placeholder {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .profile-placeholder svg {
-            width: 100px;
-            height: 100px;
-            color: var(--primary);
-        }
-
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .skill-card {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 1rem;
-            box-shadow: var(--shadow);
-            text-align: center;
-            border: 1px solid var(--border-color);
-        }
-
-        .skill-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .skill-card h3 svg {
-            width: 32px;
-            height: 32px;
-            color: var(--primary);
-        }
-
-        .skill-list {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            justify-content: center;
-        }
-
-        .skill-list li {
-            background: var(--bg-light);
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--text-muted);
-        }
-
-        /* Portfolio */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .project-card {
-            background: var(--bg-card);
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .project-header {
-            height: 12rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-header svg {
-            width: 64px;
-            height: 64px;
-            color: white;
-            z-index: 1;
-        }
-
-        .project-header::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom right, var(--primary), var(--secondary));
-            opacity: 0.8;
-        }
-
-        .project-body {
-            padding: 1.5rem;
-        }
-
-        .project-body h3 {
-            font-size: 1.125rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-body p {
-            color: var(--text-muted);
-            font-size: 0.875rem;
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .tag {
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            background: rgba(59, 130, 246, 0.1);
-            color: var(--primary);
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            font-size: 0.875rem;
-        }
-
-        .project-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-
-        .project-links a:hover {
-            color: var(--primary);
-        }
-
-        .project-links svg {
-            width: 16px;
-            height: 16px;
-        }
-
-        /* Contact */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        @media (min-width: 768px) {
-            .contact-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .contact-links a {
-            display: flex;
-            align-items: center;
-            padding: 1rem;
-            background: var(--bg-card);
-            border-radius: 0.75rem;
-            margin-bottom: 0.75rem;
-            text-decoration: none;
-            color: var(--text-muted);
-            box-shadow: var(--shadow);
-            transition: transform 0.2s;
-        }
-
-        .contact-links a:hover {
-            transform: translateX(5px);
-        }
-
-        .contact-links svg {
-            width: 24px;
-            height: 24px;
-            margin-right: 1rem;
-            color: var(--primary);
-        }
-
-        .contact-form {
-            background: var(--bg-card);
-            padding: 1.5rem;
-            border-radius: 1rem;
-            box-shadow: var(--shadow);
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            border: 1px solid var(--border-color);
-            border-radius: 0.5rem;
-            background: var(--bg-light);
-            color: var(--text-main);
-            font-family: inherit;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .disabled-notice {
-            text-align: center;
-            padding: 1rem;
-            border: 1px dashed var(--border-color);
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-muted);
-            font-size: 0.875rem;
-        }
-
-        /* Footer */
-        footer {
-            padding: 2rem;
-            text-align: center;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .footer-links button {
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            cursor: pointer;
-            font-size: 0.875rem;
-        }
-
-        .footer-links button:hover {
-            color: var(--text-main);
-        }
-
-        /* Modals */
-        .modal-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(4px);
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s;
-        }
-
-        .modal-overlay.open {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .modal-content {
-            background: var(--bg-card);
-            border-radius: 1rem;
-            padding: 2rem;
-            max-width: 500px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            transform: scale(0.95);
-            transition: transform 0.3s;
-        }
-
-        .modal-overlay.open .modal-content {
-            transform: scale(1);
-        }
-
-        .modal-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .modal-content p, .modal-content h4 {
-            margin-bottom: 0.75rem;
-            color: var(--text-muted);
-        }
-
-        .modal-content h4 {
-            color: var(--text-main);
-            font-size: 1.125rem;
-        }
-
-        .modal-close-btn {
-            margin-top: 1.5rem;
-            padding: 0.5rem 1.5rem;
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 9999px;
-            cursor: pointer;
-            font-weight: 500;
-        }
-
-        /* Animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            #mobile-menu-toggle {
-                display: block;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.75rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <nav id="navbar">
         <div class="nav-container">
             <div class="nav-links">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#portfolio" class="nav-link">Portfolio</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
             </div>
             <div class="nav-buttons">
                 <button id="mobile-menu-toggle" aria-label="Open menu">
@@ -672,469 +39,251 @@
     </nav>
 
     <div id="mobile-menu">
-        <a href="#home" class="mobile-nav-link">Home</a>
-        <a href="#about" class="mobile-nav-link">About</a>
-        <a href="#skills" class="mobile-nav-link">Skills</a>
-        <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
-        <a href="#contact" class="mobile-nav-link">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
     </div>
 
     <section id="home">
-        <div class="content reveal">
-            <h1>Hello, I'm Fabian Ternis</h1>
-            <p class="subtitle">Laravel Developer | Web Enthusiast | Problem Solver</p>
-            <a href="#portfolio" class="btn-primary">
-                View My Work
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-        </div>
+        <h1>Hello, I'm Fabian Ternis</h1>
+        <p>Laravel Developer | Web Enthusiast | Problem Solver</p>
+        <a href="#portfolio">View My Work</a>
     </section>
 
     <section id="about">
-        <div class="container">
-            <h2 class="reveal">About Me</h2>
-            <div class="about-grid">
-                <div class="about-text reveal">
-                    <p>I'm a passionate Laravel developer with a deep love for crafting elegant web solutions. With years of experience in full-stack development, I specialize in building scalable, maintainable applications that solve real-world problems.</p>
-                    <p>As the owner of <a href="https://xpsystems.eu" target="_blank">XPsystems.eu</a> and <a href="https://europehost.eu" target="_blank">europehost.eu</a>, I bring both technical expertise and business acumen to every project. I also created <a href="https://mtex.dev" target="_blank">mtex.dev</a>, a platform dedicated to creating free, open-source websites for developers using Laravel PHP.</p>
-                    <p>My work spans from enterprise applications to creative web experiences. I believe in modern development practices, clean code architecture, and delivering exceptional user experiences. Check out my portfolios at <a href="https://fternis.de" target="_blank">fternis.de</a> and <a href="https://fabianternis.de" target="_blank">fabianternis.de</a> to see my latest work.</p>
-                </div>
-                <div class="profile-circle reveal">
-                    <div class="profile-placeholder">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h2>About Me</h2>
+        <p>I'm a passionate Laravel developer with a deep love for crafting elegant web solutions. With years of experience in full-stack development, I specialize in building scalable, maintainable applications that solve real-world problems.</p>
+        <p>As the owner of <a href="https://xpsystems.eu" target="_blank">XPsystems.eu</a> and <a href="https://europehost.eu" target="_blank">europehost.eu</a>, I bring both technical expertise and business acumen to every project. I also created <a href="https://mtex.dev" target="_blank">mtex.dev</a>, a platform dedicated to creating free, open-source websites for developers using Laravel PHP.</p>
+        <p>My work spans from enterprise applications to creative web experiences. I believe in modern development practices, clean code architecture, and delivering exceptional user experiences. Check out my portfolios at <a href="https://fternis.de" target="_blank">fternis.de</a> and <a href="https://fabianternis.de" target="_blank">fabianternis.de</a> to see my latest work.</p>
     </section>
 
     <section id="skills">
-        <div class="container">
-            <h2 class="reveal">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-card reveal">
-                    <h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-                        Backend
-                    </h3>
-                    <ul class="skill-list">
-                        <li>PHP (Laravel)</li>
-                        <li>MySQL</li>
-                        <li>RESTful APIs</li>
-                        <li>Docker</li>
-                        <li>Linux</li>
-                    </ul>
-                </div>
-                <div class="skill-card reveal">
-                    <h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                        Frontend
-                    </h3>
-                    <ul class="skill-list">
-                        <li>HTML5, CSS3</li>
-                        <li>JavaScript</li>
-                        <li>Tailwind CSS</li>
-                        <li>Bootstrap</li>
-                        <li>Responsive Design</li>
-                    </ul>
-                </div>
-                <div class="skill-card reveal">
-                    <h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
-                        Tools & DevOps
-                    </h3>
-                    <ul class="skill-list">
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>AWS/Cloud Services</li>
-                        <li>npm</li>
-                        <li>Composer</li>
-                    </ul>
-                </div>
-            </div>
+        <h2>Skills & Technologies</h2>
+        <div>
+            <h3>Backend</h3>
+            <ul>
+                <li>PHP (Laravel)</li>
+                <li>MySQL</li>
+                <li>RESTful APIs</li>
+                <li>Docker</li>
+                <li>Linux</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Frontend</h3>
+            <ul>
+                <li>HTML5, CSS3</li>
+                <li>JavaScript</li>
+                <li>Tailwind CSS</li>
+                <li>Bootstrap</li>
+                <li>Responsive Design</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Tools & DevOps</h3>
+            <ul>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>AWS/Cloud Services</li>
+                <li>npm</li>
+                <li>Composer</li>
+            </ul>
         </div>
     </section>
 
     <section id="portfolio">
-        <div class="container">
-            <h2 class="reveal">Featured Projects</h2>
-            <div class="portfolio-grid" id="project-grid">
-                <!-- Projects will be injected by JS -->
-            </div>
+        <h2>Featured Projects</h2>
+        <div>
+            <h3>dsc.pics - Discord Image Host</h3>
+            <p>Free, open-source image hosting for Discord. Sub-project of europehost.eu.</p>
+            <ul>
+                <li>Laravel</li>
+                <li>TailwindCSS</li>
+                <li>S3</li>
+                <li>RestAPI</li>
+            </ul>
+            <a href="https://dsc.pics" target="_blank">Live</a>
+            <a href="https://github.com/europehost/dsc.pics" target="_blank">Code</a>
+            <a href="https://x.com/@dscdotpics" target="_blank">X</a>
+        </div>
+        <div>
+            <h3>dsc.pics-Google-Chrome-Stats-Extension</h3>
+            <p>Chrome extension utilizing the dsc.pics RestAPI for statistics.</p>
+            <ul>
+                <li>JavaScript</li>
+                <li>RestAPI</li>
+                <li>Chrome API</li>
+            </ul>
+            <a href="https://chromewebstore.google.com/detail/dscpics-global-stats/hgfcfjggpadjoaedngakcghlimbibmjk" target="_blank">Live</a>
+            <a href="https://github.com/EuropeHost/dsc.pics-stats-extension" target="_blank">Code</a>
+        </div>
+        <div>
+            <h3>gimy.site - Static Website Host</h3>
+            <p>Free static website hosting (HTML, CSS, JS, Media). Sub-project of mtex.dev.</p>
+            <ul>
+                <li>Laravel</li>
+                <li>AWS S3</li>
+                <li>MySQL</li>
+            </ul>
+            <a href="https://gimy.site" target="_blank">Live</a>
+            <a href="https://github.com/MTEX-dev/gimy-site" target="_blank">Code</a>
+            <a href="https://x.com/@gimydotsite" target="_blank">X</a>
+        </div>
+        <div>
+            <h3>getmy.name - Portfolio API</h3>
+            <p>Free portfolio API for developers. Sub-project of mtex.dev.</p>
+            <ul>
+                <li>Laravel</li>
+                <li>MySQL</li>
+                <li>RESTful</li>
+            </ul>
+            <a href="https://getmy.name" target="_blank">Live</a>
+            <a href="https://github.com/mtex-dev/getmy.name" target="_blank">Code</a>
+        </div>
+        <div>
+            <h3>getmy.blog - Blog API</h3>
+            <p>Free blog API for developers. Sub-project of mtex.dev.</p>
+            <ul>
+                <li>Laravel</li>
+                <li>MySQL</li>
+                <li>RESTful</li>
+            </ul>
+            <a href="https://getmy.blog" target="_blank">Live</a>
+            <a href="https://github.com/mtex-dev/getmy.blog" target="_blank">Code</a>
+        </div>
+        <div>
+            <h3>betterbreeze - Laravel Starter Kit</h3>
+            <p>An enhanced Laravel Breeze starter kit with better layout and file structure.</p>
+            <ul>
+                <li>Laravel</li>
+                <li>TailwindCSS</li>
+                <li>PHP</li>
+            </ul>
+            <a href="https://github.com/michaelninder/betterbreeze" target="_blank">Code</a>
+        </div>
+        <div>
+            <h3>Cloud - Laravel-based Cloud System</h3>
+            <p>A Laravel 12 cloud system with tagging features (not yet completed).</p>
+            <ul>
+                <li>Laravel 12</li>
+                <li>Storage API</li>
+                <li>PHP</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Simple PHP Website for Beginners</h3>
+            <p>A straightforward PHP website for learning web development basics.</p>
+            <ul>
+                <li>PHP</li>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+            <a href="https://github.com/XP-Craft/simple-php-web" target="_blank">Code</a>
+        </div>
+        <div>
+            <h3>fternis.de - Personal Portfolio</h3>
+            <p>My personal portfolio website (not yet powered by getmy.name).</p>
+            <ul>
+                <li>Laravel</li>
+                <li>TailwindCSS</li>
+                <li>PHP</li>
+            </ul>
+            <a href="https://fternis.de" target="_blank">Live</a>
+            <a href="https://github.com/Michaelninder/portfolio" target="_blank">Code</a>
+        </div>
+        <div>
+            <h3>Code Snippets Collection</h3>
+            <p>A repository of useful code snippets, including a scroll-to-top button.</p>
+            <ul>
+                <li>JavaScript</li>
+                <li>CSS</li>
+                <li>HTML</li>
+            </ul>
+            <a href="https://github.com/Michaelninder/code-snippets" target="_blank">Code</a>
+        </div>
+        <div>
+            <h3>mtex.dev - Developer Platform</h3>
+            <p>The developer platform currently under rework.</p>
+            <ul>
+                <li>Laravel</li>
+                <li>TailwindCSS</li>
+                <li>PHP</li>
+            </ul>
+            <a href="https://mtex.dev" target="_blank">Live</a>
+            <a href="https://github.com/MTEX-dev" target="_blank">Code (Org)</a>
+        </div>
+        <div>
+            <h3>MoodFood - Recipe Management System</h3>
+            <p>A comprehensive Laravel-based system for managing recipes.</p>
+            <ul>
+                <li>Laravel</li>
+                <li>TailwindCSS</li>
+            </ul>
+            <a href="https://moodfood.hhgkl.de" target="_blank">Live</a>
+        </div>
+        <div>
+            <h3>More Projects In Progress...</h3>
+            <p>Always working on new and exciting Laravel applications and web solutions!</p>
+            <ul>
+                <li>Laravel</li>
+                <li>PHP</li>
+                <li>And More!</li>
+            </ul>
         </div>
     </section>
 
     <section id="contact">
-        <div class="container">
-            <h2 class="reveal">Let's Connect</h2>
-            <div class="contact-grid">
-                <div class="contact-links reveal">
-                    <h3>Get In Touch</h3>
-                    <a href="mailto:f.ternis@xpsystems.eu">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        f.ternis@xpsystems.eu
-                    </a>
-                    <a href="https://github.com/michaelninder" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                        github.com/michaelninder
-                    </a>
-                    <a href="https://x.com/@micha_was_taken" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-                        @micha_was_taken
-                    </a>
-                </div>
-                <div class="contact-form reveal">
-                    <h3>Send a Message</h3>
-                    <div class="disabled-notice">
-                        Contact form is temporarily disabled. Please use the direct links on the left to get in touch!
-                    </div>
-                    <form>
-                        <div class="form-group"><input type="text" placeholder="Your Name" disabled></div>
-                        <div class="form-group"><input type="email" placeholder="Your Email" disabled></div>
-                        <div class="form-group"><input type="text" placeholder="Subject" disabled></div>
-                        <div class="form-group"><textarea placeholder="Your Message" disabled></textarea></div>
-                        <button type="submit" class="btn-primary" style="width: 100%; opacity: 0.5; cursor: not-allowed;" disabled>Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+        <h2>Let's Connect</h2>
+        <h3>Get In Touch</h3>
+        <a href="mailto:f.ternis@xpsystems.eu">f.ternis@xpsystems.eu</a>
+        <a href="https://github.com/michaelninder" target="_blank">github.com/michaelninder</a>
+        <a href="https://x.com/@micha_was_taken" target="_blank">@micha_was_taken</a>
+        
+        <h3>Send a Message</h3>
+        <p>Contact form is temporarily disabled. Please use the direct links above to get in touch!</p>
+        <form>
+            <input type="text" placeholder="Your Name" disabled>
+            <input type="email" placeholder="Your Email" disabled>
+            <input type="text" placeholder="Subject" disabled>
+            <textarea placeholder="Your Message" disabled></textarea>
+            <button type="submit" disabled>Send Message</button>
+        </form>
     </section>
 
     <footer>
         <p>&copy; 2025 Fabian Ternis. All rights reserved.</p>
-        <div class="footer-links">
-            <button id="open-privacy">Privacy Policy</button>
-            <button id="open-imprint">Imprint</button>
-        </div>
+        <button id="open-privacy">Privacy Policy</button>
+        <button id="open-imprint">Imprint</button>
     </footer>
 
-    <div id="privacyPolicyModal" class="modal-overlay">
-        <div class="modal-content">
-            <h3>Privacy Policy</h3>
-            <p>Welcome to my personal portfolio website. Your privacy is a priority for me.</p>
-            <h4>1. Data Collection</h4>
-            <p>This website is designed to be as privacy-friendly as possible. I do not actively collect any personal data from visitors. There are no tracking cookies, analytics that store personal information, or third-party advertising scripts.</p>
-            <h4>2. Theme Preference</h4>
-            <p>The only information stored locally in your browser is your theme preference (dark or light mode). This is saved in your browser's local storage and is solely used to remember your choice for a consistent user experience. This preference is not transmitted to my server or any third party.</p>
-            <h4>3. External Links</h4>
-            <p>My website contains links to external websites (e.g., GitHub, X, etc.). Please be aware that I am not responsible for the privacy practices of these other sites. I encourage you to read the privacy statements of any other site that collects personally identifiable information.</p>
-            <h4>4. Changes to this Policy</h4>
-            <p>I may update this privacy policy from time to time. Any changes will be posted on this page. You are advised to review this Privacy Policy periodically for any changes.</p>
-            <h4>5. Contact</h4>
-            <p>If you have any questions about this privacy policy, please contact me at f.ternis@xpsystems.eu.</p>
-            <button id="close-privacy" class="modal-close-btn">Close</button>
-        </div>
+    <div id="privacyPolicyModal">
+        <h3>Privacy Policy</h3>
+        <p>Welcome to my personal portfolio website. Your privacy is a priority for me.</p>
+        <h4>1. Data Collection</h4>
+        <p>This website is designed to be as privacy-friendly as possible. I do not actively collect any personal data from visitors. There are no tracking cookies, analytics that store personal information, or third-party advertising scripts.</p>
+        <h4>2. Theme Preference</h4>
+        <p>The only information stored locally in your browser is your theme preference (dark or light mode). This is saved in your browser's local storage and is solely used to remember your choice for a consistent user experience. This preference is not transmitted to my server or any third party.</p>
+        <h4>3. External Links</h4>
+        <p>My website contains links to external websites (e.g., GitHub, X, etc.). Please be aware that I am not responsible for the privacy practices of these other sites. I encourage you to read the privacy statements of any other site that collects personally identifiable information.</p>
+        <h4>4. Changes to this Policy</h4>
+        <p>I may update this privacy policy from time to time. Any changes will be posted on this page. You are advised to review this Privacy Policy periodically for any changes.</p>
+        <h4>5. Contact</h4>
+        <p>If you have any questions about this privacy policy, please contact me at f.ternis@xpsystems.eu.</p>
+        <button id="close-privacy">Close</button>
     </div>
 
-    <div id="imprintModal" class="modal-overlay">
-        <div class="modal-content">
-            <h3>Imprint</h3>
-            <h4>Information according to § 5 TMG</h4>
-            <p><strong>Fabian Ternis</strong></p>
-            <p>Alzeyer Str. 97<br>67592 Floersheim-Dalsheim<br>Germany</p>
-            <h4>Contact:</h4>
-            <p>Email: f.ternis@xpsystems.eu<br>Phone: Available upon request</p>
-            <h4>Responsible for content according to § 55 Abs. 2 RStV:</h4>
-            <p>Fabian Ternis</p>
-            <button id="close-imprint" class="modal-close-btn">Close</button>
-        </div>
+    <div id="imprintModal">
+        <h3>Imprint</h3>
+        <h4>Information according to § 5 TMG</h4>
+        <p><strong>Fabian Ternis</strong></p>
+        <p>Alzeyer Str. 97<br>67592 Floersheim-Dalsheim<br>Germany</p>
+        <h4>Contact:</h4>
+        <p>Email: f.ternis@xpsystems.eu<br>Phone: Available upon request</p>
+        <h4>Responsible for content according to § 55 Abs. 2 RStV:</h4>
+        <p>Fabian Ternis</p>
+        <button id="close-imprint">Close</button>
     </div>
-
-    <script>
-        // --- Data ---
-        const projects = [
-            {
-                title: "dsc.pics - Discord Image Host",
-                desc: "Free, open-source image hosting for Discord. Sub-project of europehost.eu.",
-                tags: ["Laravel", "TailwindCSS", "S3", "RestAPI"],
-                links: [
-                    { url: "https://dsc.pics", label: "Live", icon: "eye" },
-                    { url: "https://github.com/europehost/dsc.pics", label: "Code", icon: "github" },
-                    { url: "https://x.com/@dscdotpics", label: "X", icon: "twitter" }
-                ],
-                color: "#3b82f6" // Blue
-            },
-            {
-                title: "dsc.pics-Google-Chrome-Stats-Extension",
-                desc: "Chrome extension utilizing the dsc.pics RestAPI for statistics.",
-                tags: ["JavaScript", "RestAPI", "Chrome API"],
-                links: [
-                    { url: "https://chromewebstore.google.com/detail/dscpics-global-stats/hgfcfjggpadjoaedngakcghlimbibmjk", label: "Live", icon: "eye" },
-                    { url: "https://github.com/EuropeHost/dsc.pics-stats-extension", label: "Code", icon: "github" }
-                ],
-                color: "#ef4444" // Red
-            },
-            {
-                title: "gimy.site - Static Website Host",
-                desc: "Free static website hosting (HTML, CSS, JS, Media). Sub-project of mtex.dev.",
-                tags: ["Laravel", "AWS S3", "MySQL"],
-                links: [
-                    { url: "https://gimy.site", label: "Live", icon: "eye" },
-                    { url: "https://github.com/MTEX-dev/gimy-site", label: "Code", icon: "github" },
-                    { url: "https://x.com/@gimydotsite", label: "X", icon: "twitter" }
-                ],
-                color: "#8b5cf6" // Purple
-            },
-            {
-                title: "getmy.name - Portfolio API",
-                desc: "Free portfolio API for developers. Sub-project of mtex.dev.",
-                tags: ["Laravel", "MySQL", "RESTful"],
-                links: [
-                    { url: "https://getmy.name", label: "Live", icon: "eye" },
-                    { url: "https://github.com/mtex-dev/getmy.name", label: "Code", icon: "github" }
-                ],
-                color: "#10b981" // Green
-            },
-            {
-                title: "getmy.blog - Blog API",
-                desc: "Free blog API for developers. Sub-project of mtex.dev.",
-                tags: ["Laravel", "MySQL", "RESTful"],
-                links: [
-                    { url: "https://getmy.blog", label: "Live", icon: "eye" },
-                    { url: "https://github.com/mtex-dev/getmy.blog", label: "Code", icon: "github" }
-                ],
-                color: "#6366f1" // Indigo
-            },
-            {
-                title: "betterbreeze - Laravel Starter Kit",
-                desc: "An enhanced Laravel Breeze starter kit with better layout and file structure.",
-                tags: ["Laravel", "TailwindCSS", "PHP"],
-                links: [
-                    { url: "https://github.com/michaelninder/betterbreeze", label: "Code", icon: "github" }
-                ],
-                color: "#14b8a6" // Teal
-            },
-            {
-                title: "Cloud - Laravel-based Cloud System",
-                desc: "A Laravel 12 cloud system with tagging features (not yet completed).",
-                tags: ["Laravel 12", "Storage API", "PHP"],
-                links: [],
-                color: "#06b6d4" // Cyan
-            },
-            {
-                title: "Simple PHP Website for Beginners",
-                desc: "A straightforward PHP website for learning web development basics.",
-                tags: ["PHP", "HTML", "CSS"],
-                links: [
-                    { url: "https://github.com/XP-Craft/simple-php-web", label: "Code", icon: "github" }
-                ],
-                color: "#eab308" // Yellow
-            },
-             {
-                title: "fternis.de - Personal Portfolio",
-                desc: "My personal portfolio website (not yet powered by getmy.name).",
-                tags: ["Laravel", "TailwindCSS", "PHP"],
-                links: [
-                    { url: "https://fternis.de", label: "Live", icon: "eye" },
-                    { url: "https://github.com/Michaelninder/portfolio", label: "Code", icon: "github" }
-                ],
-                color: "#14b8a6" // Teal
-            },
-            {
-                title: "Code Snippets Collection",
-                desc: "A repository of useful code snippets, including a scroll-to-top button.",
-                tags: ["JavaScript", "CSS", "HTML"],
-                links: [
-                    { url: "https://github.com/Michaelninder/code-snippets", label: "Code", icon: "github" }
-                ],
-                color: "#ec4899" // Pink
-            },
-            {
-                title: "mtex.dev - Developer Platform",
-                desc: "The developer platform currently under rework.",
-                tags: ["Laravel", "TailwindCSS", "PHP"],
-                links: [
-                    { url: "https://mtex.dev", label: "Live", icon: "eye" },
-                    { url: "https://github.com/MTEX-dev", label: "Code (Org)", icon: "github" }
-                ],
-                color: "#6b7280" // Gray
-            },
-            {
-                title: "MoodFood - Recipe Management System",
-                desc: "A comprehensive Laravel-based system for managing recipes.",
-                tags: ["Laravel", "TailwindCSS"],
-                links: [
-                    { url: "https://moodfood.hhgkl.de", label: "Live", icon: "eye" }
-                ],
-                color: "#f59e0b" // Amber
-            },
-            {
-                title: "More Projects In Progress...",
-                desc: "Always working on new and exciting Laravel applications and web solutions!",
-                tags: ["Laravel", "PHP", "And More!"],
-                links: [],
-                color: "#6b7280" // Gray
-            }
-        ];
-
-        // --- Helper to generate SVG icons ---
-        function getIcon(name) {
-            const icons = {
-                eye: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>`,
-                github: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>`,
-                twitter: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>`,
-                code: `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>`
-            };
-            return icons[name] || '';
-        }
-
-        // --- Render Projects ---
-        const projectGrid = document.getElementById('project-grid');
-        
-        projects.forEach(project => {
-            const card = document.createElement('div');
-            card.className = 'project-card reveal';
-
-            const tagsHtml = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-            
-            const linksHtml = project.links.map(link => 
-                `<a href="${link.url}" target="_blank" rel="noopener noreferrer">${getIcon(link.icon)} ${link.label}</a>`
-            ).join('');
-
-            card.innerHTML = `
-                <div class="project-header" style="background: ${project.color};">
-                    ${getIcon('code')}
-                </div>
-                <div class="project-body">
-                    <h3>${project.title}</h3>
-                    <p>${project.desc}</p>
-                    <div class="project-tags">${tagsHtml}</div>
-                    <div class="project-links">${linksHtml}</div>
-                </div>
-            `;
-            projectGrid.appendChild(card);
-        });
-
-
-        // --- Theme Toggle ---
-        const themeToggle = document.getElementById('theme-toggle');
-        const html = document.documentElement;
-        const sunIcon = document.querySelector('.sun-icon');
-        const moonIcon = document.querySelector('.moon-icon');
-
-        function setTheme(theme) {
-            if (theme === 'dark') {
-                html.classList.add('dark');
-                sunIcon.style.display = 'none';
-                moonIcon.style.display = 'block';
-            } else {
-                html.classList.remove('dark');
-                sunIcon.style.display = 'block';
-                moonIcon.style.display = 'none';
-            }
-            localStorage.setItem('theme', theme);
-        }
-
-        // Initialize theme
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        setTheme(savedTheme);
-
-        themeToggle.addEventListener('click', () => {
-            const newTheme = html.classList.contains('dark') ? 'light' : 'dark';
-            setTheme(newTheme);
-        });
-
-        // --- Navbar & Active Links ---
-        const navbar = document.getElementById('navbar');
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-link');
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-        window.addEventListener('scroll', () => {
-            // Navbar background
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-
-            // Active link highlighting
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 100) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // --- Mobile Menu ---
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('open');
-        });
-
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('open');
-            });
-        });
-
-        // --- Scroll Reveal Animation ---
-        const revealElements = document.querySelectorAll('.reveal');
-
-        const revealOnScroll = () => {
-            revealElements.forEach(el => {
-                const windowHeight = window.innerHeight;
-                const elementTop = el.getBoundingClientRect().top;
-                const elementVisible = 150;
-
-                if (elementTop < windowHeight - elementVisible) {
-                    el.classList.add('visible');
-                }
-            });
-        };
-
-        window.addEventListener('scroll', revealOnScroll);
-        // Trigger once on load
-        revealOnScroll();
-
-        // --- Modals ---
-        const openPrivacyBtn = document.getElementById('open-privacy');
-        const closePrivacyBtn = document.getElementById('close-privacy');
-        const privacyModal = document.getElementById('privacyPolicyModal');
-
-        const openImprintBtn = document.getElementById('open-imprint');
-        const closeImprintBtn = document.getElementById('close-imprint');
-        const imprintModal = document.getElementById('imprintModal');
-
-        function openModal(modal) {
-            modal.classList.add('open');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal(modal) {
-            modal.classList.remove('open');
-            document.body.style.overflow = '';
-        }
-
-        openPrivacyBtn.addEventListener('click', () => openModal(privacyModal));
-        closePrivacyBtn.addEventListener('click', () => closeModal(privacyModal));
-        privacyModal.addEventListener('click', (e) => {
-            if (e.target === privacyModal) closeModal(privacyModal);
-        });
-
-        openImprintBtn.addEventListener('click', () => openModal(imprintModal));
-        closeImprintBtn.addEventListener('click', () => closeModal(imprintModal));
-        imprintModal.addEventListener('click', (e) => {
-            if (e.target === imprintModal) closeModal(imprintModal);
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeModal(privacyModal);
-                closeModal(imprintModal);
-            }
-        });
-    </script>
 </body>
 </html>
