@@ -47,202 +47,226 @@
     </div>
 
     <section id="home">
-        <h1>Hello, I'm Fabian Ternis</h1>
-        <p>Laravel Developer | Web Enthusiast | Problem Solver</p>
+        <pre><code class="language-json">{
+    "profile": {
+        "name": "Fabian Ternis",
+        "greeting": "Hello, I'm Fabian Ternis",
+        "roles": [
+            "Laravel Developer",
+            "Web Enthusiast",
+            "Problem Solver"
+        ],
+        "status": "available_for_work"
+    }
+}</code></pre>
         <a href="#portfolio">View My Work</a>
     </section>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>I'm a passionate Laravel developer with a deep love for crafting elegant web solutions. With years of experience in full-stack development, I specialize in building scalable, maintainable applications that solve real-world problems.</p>
-        <p>As the owner of <a href="https://xpsystems.eu" target="_blank">XPsystems.eu</a> and <a href="https://europehost.eu" target="_blank">europehost.eu</a>, I bring both technical expertise and business acumen to every project. I also created <a href="https://mtex.dev" target="_blank">mtex.dev</a>, a platform dedicated to creating free, open-source websites for developers using Laravel PHP.</p>
-        <p>My work spans from enterprise applications to creative web experiences. I believe in modern development practices, clean code architecture, and delivering exceptional user experiences. Check out my portfolios at <a href="https://fternis.de" target="_blank">fternis.de</a> and <a href="https://fabianternis.de" target="_blank">fabianternis.de</a> to see my latest work.</p>
+        <pre><code class="language-php">// config/profile.php
+
+return [
+    'developer' => [
+        'name' => 'Fabian Ternis',
+        'passion' => 'Laravel development',
+        'focus' => 'elegant web solutions',
+        'experience' => 'years of full-stack development',
+        'specialization' => 'scalable, maintainable applications',
+    ],
+
+    'businesses' => [
+        'owner' => [
+            'xpsystems' => 'https://xpsystems.eu',
+            'europehost' => 'https://europehost.eu',
+        ],
+        'founder' => [
+            'mtex' => 'https://mtex.dev',
+            'description' => 'Free, open-source websites for developers',
+        ],
+    ],
+
+    'philosophy' => [
+        'modern_practices' => true,
+        'clean_architecture' => true,
+        'exceptional_ux' => true,
+    ],
+
+    'portfolios' => [
+        'primary' => 'https://fternis.de',
+        'secondary' => 'https://fabianternis.de',
+    ],
+];</code></pre>
     </section>
 
     <section id="skills">
         <h2>Skills & Technologies</h2>
-        <div>
-            <h3>Backend</h3>
-            <ul>
-                <li>PHP (Laravel)</li>
-                <li>MySQL</li>
-                <li>RESTful APIs</li>
-                <li>Docker</li>
-                <li>Linux</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Frontend</h3>
-            <ul>
-                <li>HTML5, CSS3</li>
-                <li>JavaScript</li>
-                <li>Tailwind CSS</li>
-                <li>Bootstrap</li>
-                <li>Responsive Design</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Tools & DevOps</h3>
-            <ul>
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>AWS/Cloud Services</li>
-                <li>npm</li>
-                <li>Composer</li>
-            </ul>
-        </div>
+        <pre><code class="language-json">{
+    "skills": {
+        "backend": {
+            "languages": ["PHP (Laravel)"],
+            "databases": ["MySQL"],
+            "apis": ["RESTful APIs"],
+            "infrastructure": ["Docker", "Linux"]
+        },
+        "frontend": {
+            "core": ["HTML5", "CSS3", "JavaScript"],
+            "frameworks": ["Tailwind CSS", "Bootstrap"],
+            "practices": ["Responsive Design"]
+        },
+        "tools_devops": {
+            "version_control": ["Git", "GitHub"],
+            "cloud": ["AWS/Cloud Services"],
+            "package_managers": ["npm", "Composer"]
+        }
+    }
+}</code></pre>
     </section>
 
     <section id="portfolio">
         <h2>Featured Projects</h2>
-        <div>
-            <h3>dsc.pics - Discord Image Host</h3>
-            <p>Free, open-source image hosting for Discord. Sub-project of europehost.eu.</p>
-            <ul>
-                <li>Laravel</li>
-                <li>TailwindCSS</li>
-                <li>S3</li>
-                <li>RestAPI</li>
-            </ul>
-            <a href="https://dsc.pics" target="_blank">Live</a>
-            <a href="https://github.com/europehost/dsc.pics" target="_blank">Code</a>
-            <a href="https://x.com/@dscdotpics" target="_blank">X</a>
-        </div>
-        <div>
-            <h3>dsc.pics-Google-Chrome-Stats-Extension</h3>
-            <p>Chrome extension utilizing the dsc.pics RestAPI for statistics.</p>
-            <ul>
-                <li>JavaScript</li>
-                <li>RestAPI</li>
-                <li>Chrome API</li>
-            </ul>
-            <a href="https://chromewebstore.google.com/detail/dscpics-global-stats/hgfcfjggpadjoaedngakcghlimbibmjk" target="_blank">Live</a>
-            <a href="https://github.com/EuropeHost/dsc.pics-stats-extension" target="_blank">Code</a>
-        </div>
-        <div>
-            <h3>gimy.site - Static Website Host</h3>
-            <p>Free static website hosting (HTML, CSS, JS, Media). Sub-project of mtex.dev.</p>
-            <ul>
-                <li>Laravel</li>
-                <li>AWS S3</li>
-                <li>MySQL</li>
-            </ul>
-            <a href="https://gimy.site" target="_blank">Live</a>
-            <a href="https://github.com/MTEX-dev/gimy-site" target="_blank">Code</a>
-            <a href="https://x.com/@gimydotsite" target="_blank">X</a>
-        </div>
-        <div>
-            <h3>getmy.name - Portfolio API</h3>
-            <p>Free portfolio API for developers. Sub-project of mtex.dev.</p>
-            <ul>
-                <li>Laravel</li>
-                <li>MySQL</li>
-                <li>RESTful</li>
-            </ul>
-            <a href="https://getmy.name" target="_blank">Live</a>
-            <a href="https://github.com/mtex-dev/getmy.name" target="_blank">Code</a>
-        </div>
-        <div>
-            <h3>getmy.blog - Blog API</h3>
-            <p>Free blog API for developers. Sub-project of mtex.dev.</p>
-            <ul>
-                <li>Laravel</li>
-                <li>MySQL</li>
-                <li>RESTful</li>
-            </ul>
-            <a href="https://getmy.blog" target="_blank">Live</a>
-            <a href="https://github.com/mtex-dev/getmy.blog" target="_blank">Code</a>
-        </div>
-        <div>
-            <h3>betterbreeze - Laravel Starter Kit</h3>
-            <p>An enhanced Laravel Breeze starter kit with better layout and file structure.</p>
-            <ul>
-                <li>Laravel</li>
-                <li>TailwindCSS</li>
-                <li>PHP</li>
-            </ul>
-            <a href="https://github.com/michaelninder/betterbreeze" target="_blank">Code</a>
-        </div>
-        <div>
-            <h3>Cloud - Laravel-based Cloud System</h3>
-            <p>A Laravel 12 cloud system with tagging features (not yet completed).</p>
-            <ul>
-                <li>Laravel 12</li>
-                <li>Storage API</li>
-                <li>PHP</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Simple PHP Website for Beginners</h3>
-            <p>A straightforward PHP website for learning web development basics.</p>
-            <ul>
-                <li>PHP</li>
-                <li>HTML</li>
-                <li>CSS</li>
-            </ul>
-            <a href="https://github.com/XP-Craft/simple-php-web" target="_blank">Code</a>
-        </div>
-        <div>
-            <h3>fternis.de - Personal Portfolio</h3>
-            <p>My personal portfolio website (not yet powered by getmy.name).</p>
-            <ul>
-                <li>Laravel</li>
-                <li>TailwindCSS</li>
-                <li>PHP</li>
-            </ul>
-            <a href="https://fternis.de" target="_blank">Live</a>
-            <a href="https://github.com/Michaelninder/portfolio" target="_blank">Code</a>
-        </div>
-        <div>
-            <h3>Code Snippets Collection</h3>
-            <p>A repository of useful code snippets, including a scroll-to-top button.</p>
-            <ul>
-                <li>JavaScript</li>
-                <li>CSS</li>
-                <li>HTML</li>
-            </ul>
-            <a href="https://github.com/Michaelninder/code-snippets" target="_blank">Code</a>
-        </div>
-        <div>
-            <h3>mtex.dev - Developer Platform</h3>
-            <p>The developer platform currently under rework.</p>
-            <ul>
-                <li>Laravel</li>
-                <li>TailwindCSS</li>
-                <li>PHP</li>
-            </ul>
-            <a href="https://mtex.dev" target="_blank">Live</a>
-            <a href="https://github.com/MTEX-dev" target="_blank">Code (Org)</a>
-        </div>
-        <div>
-            <h3>MoodFood - Recipe Management System</h3>
-            <p>A comprehensive Laravel-based system for managing recipes.</p>
-            <ul>
-                <li>Laravel</li>
-                <li>TailwindCSS</li>
-            </ul>
-            <a href="https://moodfood.hhgkl.de" target="_blank">Live</a>
-        </div>
-        <div>
-            <h3>More Projects In Progress...</h3>
-            <p>Always working on new and exciting Laravel applications and web solutions!</p>
-            <ul>
-                <li>Laravel</li>
-                <li>PHP</li>
-                <li>And More!</li>
-            </ul>
-        </div>
+        <pre><code class="language-json">{
+    "projects": [
+        {
+            "name": "dsc.pics",
+            "type": "Discord Image Host",
+            "description": "Free, open-source image hosting for Discord",
+            "stack": ["Laravel", "TailwindCSS", "S3", "RestAPI"],
+            "links": {
+                "live": "https://dsc.pics",
+                "code": "github.com/europehost/dsc.pics",
+                "social": "@dscdotpics"
+            }
+        },
+        {
+            "name": "dsc.pics Chrome Extension",
+            "type": "Browser Extension",
+            "description": "Chrome extension utilizing the dsc.pics RestAPI",
+            "stack": ["JavaScript", "RestAPI", "Chrome API"],
+            "links": {
+                "store": "Chrome Web Store",
+                "code": "github.com/EuropeHost/dsc.pics-stats-extension"
+            }
+        },
+        {
+            "name": "gimy.site",
+            "type": "Static Website Host",
+            "description": "Free static website hosting (HTML, CSS, JS, Media)",
+            "stack": ["Laravel", "AWS S3", "MySQL"],
+            "links": {
+                "live": "https://gimy.site",
+                "code": "github.com/MTEX-dev/gimy-site",
+                "social": "@gimydotsite"
+            }
+        },
+        {
+            "name": "getmy.name",
+            "type": "Portfolio API",
+            "description": "Free portfolio API for developers",
+            "stack": ["Laravel", "MySQL", "RESTful"],
+            "links": {
+                "live": "https://getmy.name",
+                "code": "github.com/mtex-dev/getmy.name"
+            }
+        },
+        {
+            "name": "getmy.blog",
+            "type": "Blog API",
+            "description": "Free blog API for developers",
+            "stack": ["Laravel", "MySQL", "RESTful"],
+            "links": {
+                "live": "https://getmy.blog",
+                "code": "github.com/mtex-dev/getmy.blog"
+            }
+        },
+        {
+            "name": "betterbreeze",
+            "type": "Laravel Starter Kit",
+            "description": "Enhanced Laravel Breeze with better structure",
+            "stack": ["Laravel", "TailwindCSS", "PHP"],
+            "links": {
+                "code": "github.com/michaelninder/betterbreeze"
+            }
+        },
+        {
+            "name": "Cloud",
+            "type": "Cloud Storage System",
+            "description": "Laravel 12 cloud system with tagging (WIP)",
+            "stack": ["Laravel 12", "Storage API", "PHP"],
+            "status": "in_progress"
+        },
+        {
+            "name": "Simple PHP Website",
+            "type": "Educational",
+            "description": "PHP website for learning web development",
+            "stack": ["PHP", "HTML", "CSS"],
+            "links": {
+                "code": "github.com/XP-Craft/simple-php-web"
+            }
+        },
+        {
+            "name": "fternis.de",
+            "type": "Personal Portfolio",
+            "description": "My personal portfolio website",
+            "stack": ["Laravel", "TailwindCSS", "PHP"],
+            "links": {
+                "live": "https://fternis.de",
+                "code": "github.com/Michaelninder/portfolio"
+            }
+        },
+        {
+            "name": "Code Snippets",
+            "type": "Collection",
+            "description": "Useful code snippets repository",
+            "stack": ["JavaScript", "CSS", "HTML"],
+            "links": {
+                "code": "github.com/Michaelninder/code-snippets"
+            }
+        },
+        {
+            "name": "mtex.dev",
+            "type": "Developer Platform",
+            "description": "Platform for developers (under rework)",
+            "stack": ["Laravel", "TailwindCSS", "PHP"],
+            "links": {
+                "live": "https://mtex.dev",
+                "org": "github.com/MTEX-dev"
+            }
+        },
+        {
+            "name": "MoodFood",
+            "type": "Recipe Management",
+            "description": "Laravel-based recipe management system",
+            "stack": ["Laravel", "TailwindCSS"],
+            "links": {
+                "live": "https://moodfood.hhgkl.de"
+            }
+        }
+    ],
+    "more_in_progress": true
+}</code></pre>
     </section>
 
     <section id="contact">
         <h2>Let's Connect</h2>
-        <h3>Get In Touch</h3>
-        <a href="mailto:f.ternis@xpsystems.eu">f.ternis@xpsystems.eu</a>
-        <a href="https://github.com/michaelninder" target="_blank">github.com/michaelninder</a>
-        <a href="https://x.com/@micha_was_taken" target="_blank">@micha_was_taken</a>
-        
-        <h3>Send a Message</h3>
-        <p>Contact form is temporarily disabled. Please use the direct links above to get in touch!</p>
+        <pre><code class="language-json">{
+    "contact": {
+        "email": "f.ternis@xpsystems.eu",
+        "github": {
+            "username": "michaelninder",
+            "url": "https://github.com/michaelninder"
+        },
+        "x_twitter": {
+            "handle": "@micha_was_taken",
+            "url": "https://x.com/@micha_was_taken"
+        }
+    },
+    "form": {
+        "status": "temporarily_disabled",
+        "fields": ["name", "email", "subject", "message"],
+        "action": "use_direct_links"
+    }
+}</code></pre>
         <form>
             <input type="text" placeholder="Your Name" disabled>
             <input type="email" placeholder="Your Email" disabled>
@@ -253,14 +277,37 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Fabian Ternis. All rights reserved.</p>
+        <pre><code class="language-json">{
+    "copyright": "© 2025 Fabian Ternis. All rights reserved.",
+    "legal": ["Privacy Policy", "Imprint"]
+}</code></pre>
         <button id="open-privacy">Privacy Policy</button>
         <button id="open-imprint">Imprint</button>
     </footer>
 
     <div id="privacyPolicyModal">
         <h3>Privacy Policy</h3>
-        <p>Welcome to my personal portfolio website. Your privacy is a priority for me.</p>
+        <pre><code class="language-php">// Privacy Policy Configuration
+
+return [
+    'data_collection' => 'none',
+    'tracking' => false,
+    'analytics' => false,
+    'third_party_scripts' => false,
+    
+    'local_storage' => [
+        'purpose' => 'theme_preference',
+        'transmitted' => false,
+    ],
+    
+    'external_links' => [
+        'github.com',
+        'x.com',
+        // Not responsible for third-party policies
+    ],
+    
+    'contact' => 'f.ternis@xpsystems.eu',
+];</code></pre>
         <h4>1. Data Collection</h4>
         <p>This website is designed to be as privacy-friendly as possible. I do not actively collect any personal data from visitors. There are no tracking cookies, analytics that store personal information, or third-party advertising scripts.</p>
         <h4>2. Theme Preference</h4>
@@ -276,13 +323,26 @@
 
     <div id="imprintModal">
         <h3>Imprint</h3>
-        <h4>Information according to § 5 TMG</h4>
-        <p><strong>Fabian Ternis</strong></p>
-        <p>Alzeyer Str. 97<br>67592 Floersheim-Dalsheim<br>Germany</p>
-        <h4>Contact:</h4>
-        <p>Email: f.ternis@xpsystems.eu<br>Phone: Available upon request</p>
-        <h4>Responsible for content according to § 55 Abs. 2 RStV:</h4>
-        <p>Fabian Ternis</p>
+        <pre><code class="language-json">{
+    "legal_info": {
+        "section": "§ 5 TMG",
+        "name": "Fabian Ternis",
+        "address": {
+            "street": "Alzeyer Str. 97",
+            "city": "Floersheim-Dalsheim",
+            "postal": "67592",
+            "country": "Germany"
+        },
+        "contact": {
+            "email": "f.ternis@xpsystems.eu",
+            "phone": "Available upon request"
+        },
+        "content_responsible": {
+            "section": "§ 55 Abs. 2 RStV",
+            "name": "Fabian Ternis"
+        }
+    }
+}</code></pre>
         <button id="close-imprint">Close</button>
     </div>
 </body>
