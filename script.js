@@ -1,19 +1,19 @@
 (function () {
   "use strict";
 
-  // Mobile Menu Toggle
+  // --- Mobile Menu Toggle ---
   const menuToggle = document.getElementById("menuToggle");
   const mobileNav = document.getElementById("mobileNav");
 
   if (menuToggle && mobileNav) {
     menuToggle.addEventListener("click", () => {
-      menuToggle.classList.toggle("active");
+      const isActive = menuToggle.classList.toggle("active");
       mobileNav.classList.toggle("active");
-      document.body.style.overflow = mobileNav.classList.contains(
-        "active"
-      )
-        ? "hidden"
-        : "";
+      
+      // Accessibility update
+      menuToggle.setAttribute("aria-expanded", isActive);
+      
+      document.body.style.overflow = isActive ? "hidden" : "";
     });
 
     // Close mobile menu when clicking a link
@@ -21,12 +21,13 @@
       link.addEventListener("click", () => {
         menuToggle.classList.remove("active");
         mobileNav.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
         document.body.style.overflow = "";
       });
     });
   }
 
-  // Work Filter
+  // --- Work Filter ---
   const filterButtons = document.querySelectorAll(".filter-btn");
   const workItems = document.querySelectorAll(".work-item");
 
@@ -38,21 +39,22 @@
       filterButtons.forEach((btn) => btn.classList.remove("active"));
       button.classList.add("active");
 
-      // Filter work items
+      // Filter work items with a slight fade effect
       workItems.forEach((item) => {
-        if (filter === "all") {
-          item.classList.remove("hidden");
+        if (filter === "all" || item.dataset.category === filter) {
+          item.style.display = "block";
+          // Small timeout to allow display:block to apply before animating opacity
+          setTimeout(() => { item.style.opacity = "1"; item.style.transform = "scale(1)"; }, 10);
         } else {
-          item.classList.toggle(
-            "hidden",
-            item.dataset.category !== filter
-          );
+          item.style.opacity = "0";
+          item.style.transform = "scale(0.95)";
+          setTimeout(() => { item.style.display = "none"; }, 200); // matches CSS transition
         }
       });
     });
   });
 
-  // Modal System
+  // --- Modal System ---
   const modalOverlay = document.getElementById("modalOverlay");
   const privacyBtn = document.getElementById("privacyBtn");
   const imprintBtn = document.getElementById("imprintBtn");
@@ -61,9 +63,12 @@
   const closeButtons = document.querySelectorAll(".modal-close");
 
   function openModal(modal) {
+    if (!modal) return;
     modal.classList.add("active");
     modalOverlay.classList.add("active");
     document.body.style.overflow = "hidden";
+    // Focus the close button for accessibility
+    modal.querySelector(".modal-close").focus();
   }
 
   function closeAllModals() {
@@ -74,40 +79,43 @@
     document.body.style.overflow = "";
   }
 
-  if (privacyBtn && privacyModal) {
-    privacyBtn.addEventListener("click", () => openModal(privacyModal));
-  }
+  if (privacyBtn) privacyBtn.addEventListener("click", () => openModal(privacyModal));
+  if (imprintBtn) imprintBtn.addEventListener("click", () => openModal(imprintModal));
 
-  if (imprintBtn && imprintModal) {
-    imprintBtn.addEventListener("click", () => openModal(imprintModal));
-  }
+  // The missing close logic:
+  closeButtons.forEach((btn) => {
+    btn.addEventListener("click", closeAllModals);
+  });
 
+  // Close on overlay click
   if (modalOverlay) {
     modalOverlay.addEventListener("click", closeAllModals);
   }
 
-  closeButtons.forEach((button) => {
-    button.addEventListener("click", closeAllModals);
-  });
-
-  // Close modals on Escape key
+  // Close on Escape key
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      closeAllModals();
-    }
+    if (e.key === "Escape") closeAllModals();
   });
 
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      const href = this.getAttribute("href");
-      if (href === "#") return;
+  // --- Scroll Reveal Animation ---
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.15
+  };
 
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: "smooth" });
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("revealed");
+        observer.unobserve(entry.target); // Only animate once
       }
     });
+  }, observerOptions);
+
+  document.querySelectorAll("section:not(.hero)").forEach(section => {
+    section.classList.add("reveal-element");
+    revealObserver.observe(section);
   });
+
 })();
