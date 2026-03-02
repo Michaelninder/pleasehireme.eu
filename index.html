@@ -3,23 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabian Ternis - Laravel Developer | pleasehireme.eu</title>
-    <meta name="description" content="Fabian Ternis - Laravel Developer, Web Enthusiast, and Problem Solver. Owner of XPsystems.eu and europehost.eu">
-    <meta name="keywords" content="Fabian Ternis, Laravel Developer, Web Developer, PHP Developer, Full-stack Developer, XPsystems.eu, europehost.eu, mtex.dev, pleasehireme.eu, web solutions, software development, custom web applications, API development, backend development, frontend development, HTML, CSS, JavaScript, Tailwind CSS, MySQL, AWS, Git, GitHub, open-source, web design, responsive design, developer portfolio, hire Laravel developer, freelance Laravel developer">
-    <meta name="author" content="Fabian Ternis">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Fabian Ternis - Laravel Developer | pleasehireme.eu">
-    <meta property="og:description" content="Fabian Ternis - Laravel Developer, Web Enthusiast, and Problem Solver. Owner of XPsystems.eu and europehost.eu">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pleasehireme.eu/">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Fabian Ternis - Laravel Developer | pleasehireme.eu">
-    <meta name="twitter:description" content="Fabian Ternis - Laravel Developer, Web Enthusiast, and Problem Solver. Owner of XPsystems.eu and europehost.eu">
+    <title>Fabian Ternis - Laravel Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav id="navbar">
         <div class="nav-container">
+            <div class="logo">pleaseHireMe.eu</div>
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
@@ -28,13 +18,11 @@
                 <a href="#contact">Contact</a>
             </div>
             <div class="nav-buttons">
-                <button id="mobile-menu-toggle" aria-label="Open menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                </button>
                 <button id="theme-toggle" aria-label="Toggle dark mode">
                     <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                     <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </button>
+                <button id="mobile-menu-toggle">☰</button>
             </div>
         </div>
     </nav>
@@ -47,306 +35,107 @@
         <a href="#contact">Contact</a>
     </div>
 
-    <section id="home">
-        <pre><code class="language-json">{
-    "profile": {
-        "name": "Fabian Ternis",
-        "greeting": "Hello, I'm Fabian Ternis",
-        "roles": [
-            "Laravel Developer",
-            "Web Enthusiast",
-            "Problem Solver"
-        ],
-        "status": "available_for_work"
-    }
-}</code></pre>
-        <a href="#portfolio">View My Work</a>
+    <section id="home" class="reveal">
+        <div class="hero-content">
+            <h1>Hello, I'm <span class="highlight">Fabian Ternis</span></h1>
+            <p class="subtitle">Laravel Developer • Web Enthusiast • Problem Solver</p>
+            <div class="status-badge">Available for work</div>
+            <a href="#portfolio" class="cta-button">View My Work</a>
+        </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="reveal">
         <h2>About Me</h2>
-        <pre><code class="language-php">// config/profile.php
-
-return [
-    'developer' => [
-        'name' => 'Fabian Ternis',
-        'passion' => 'Laravel development',
-        'focus' => 'elegant web solutions',
-        'experience' => 'years of full-stack development',
-        'specialization' => 'scalable, maintainable applications',
-    ],
-
-    'businesses' => [
-        'owner' => [
-            'xpsystems' => 'https://xpsystems.eu',
-            'europehost' => 'https://europehost.eu',
-        ],
-        'founder' => [
-            'mtex' => 'https://mtex.dev',
-            'description' => 'Free, open-source websites for developers',
-        ],
-    ],
-
-    'philosophy' => [
-        'modern_practices' => true,
-        'clean_architecture' => true,
-        'exceptional_ux' => true,
-    ],
-
-    'portfolios' => [
-        'primary' => 'https://fternis.de',
-        'secondary' => 'https://fabianternis.de',
-    ],
-];</code></pre>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>The Developer</h3>
+                <p>Focused on elegant web solutions and years of full-stack development. Specializing in scalable, maintainable Laravel applications.</p>
+            </div>
+            <div class="about-card">
+                <h3>The Founder</h3>
+                <p>Owner of <strong>XPsystems.eu</strong> and <strong>europehost.eu</strong>. Founder of <strong>mtex.dev</strong>, providing free resources for developers.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="skills">
-        <h2>Skills & Technologies</h2>
-        <pre><code class="language-json">{
-    "skills": {
-        "backend": {
-            "languages": ["PHP (Laravel)"],
-            "databases": ["MySQL"],
-            "apis": ["RESTful APIs"],
-            "infrastructure": ["Docker", "Linux"]
-        },
-        "frontend": {
-            "core": ["HTML5", "CSS3", "JavaScript"],
-            "frameworks": ["Tailwind CSS", "Bootstrap"],
-            "practices": ["Responsive Design"]
-        },
-        "tools_devops": {
-            "version_control": ["Git", "GitHub"],
-            "cloud": ["AWS/Cloud Services"],
-            "package_managers": ["npm", "Composer"]
-        }
-    }
-}</code></pre>
+    <section id="skills" class="reveal">
+        <h2>Skills & Tech</h2>
+        <div class="skills-container">
+            <div class="skill-group">
+                <h4>Backend</h4>
+                <ul><li>PHP (Laravel)</li><li>MySQL</li><li>RESTful APIs</li><li>Docker/Linux</li></ul>
+            </div>
+            <div class="skill-group">
+                <h4>Frontend</h4>
+                <ul><li>HTML5/CSS3</li><li>JavaScript</li><li>Tailwind CSS</li><li>Bootstrap</li></ul>
+            </div>
+        </div>
     </section>
 
-    <section id="portfolio">
+    <section id="portfolio" class="reveal">
         <h2>Featured Projects</h2>
-        <pre><code class="language-json">{
-    "projects": [
-        {
-            "name": "dsc.pics",
-            "type": "Discord Image Host",
-            "description": "Free, open-source image hosting for Discord",
-            "stack": ["Laravel", "TailwindCSS", "S3", "RestAPI"],
-            "links": {
-                "live": "https://dsc.pics",
-                "code": "github.com/europehost/dsc.pics",
-                "social": "@dscdotpics"
-            }
-        },
-        {
-            "name": "dsc.pics Chrome Extension",
-            "type": "Browser Extension",
-            "description": "Chrome extension utilizing the dsc.pics RestAPI",
-            "stack": ["JavaScript", "RestAPI", "Chrome API"],
-            "links": {
-                "store": "Chrome Web Store",
-                "code": "github.com/EuropeHost/dsc.pics-stats-extension"
-            }
-        },
-        {
-            "name": "gimy.site",
-            "type": "Static Website Host",
-            "description": "Free static website hosting (HTML, CSS, JS, Media)",
-            "stack": ["Laravel", "AWS S3", "MySQL"],
-            "links": {
-                "live": "https://gimy.site",
-                "code": "github.com/MTEX-dev/gimy-site",
-                "social": "@gimydotsite"
-            }
-        },
-        {
-            "name": "getmy.name",
-            "type": "Portfolio API",
-            "description": "Free portfolio API for developers",
-            "stack": ["Laravel", "MySQL", "RESTful"],
-            "links": {
-                "live": "https://getmy.name",
-                "code": "github.com/mtex-dev/getmy.name"
-            }
-        },
-        {
-            "name": "getmy.blog",
-            "type": "Blog API",
-            "description": "Free blog API for developers",
-            "stack": ["Laravel", "MySQL", "RESTful"],
-            "links": {
-                "live": "https://getmy.blog",
-                "code": "github.com/mtex-dev/getmy.blog"
-            }
-        },
-        {
-            "name": "betterbreeze",
-            "type": "Laravel Starter Kit",
-            "description": "Enhanced Laravel Breeze with better structure",
-            "stack": ["Laravel", "TailwindCSS", "PHP"],
-            "links": {
-                "code": "github.com/michaelninder/betterbreeze"
-            }
-        },
-        {
-            "name": "Cloud",
-            "type": "Cloud Storage System",
-            "description": "Laravel 12 cloud system with tagging (WIP)",
-            "stack": ["Laravel 12", "Storage API", "PHP"],
-            "status": "in_progress"
-        },
-        {
-            "name": "Simple PHP Website",
-            "type": "Educational",
-            "description": "PHP website for learning web development",
-            "stack": ["PHP", "HTML", "CSS"],
-            "links": {
-                "code": "github.com/XP-Craft/simple-php-web"
-            }
-        },
-        {
-            "name": "fternis.de",
-            "type": "Personal Portfolio",
-            "description": "My personal portfolio website",
-            "stack": ["Laravel", "TailwindCSS", "PHP"],
-            "links": {
-                "live": "https://fternis.de",
-                "code": "github.com/Michaelninder/portfolio"
-            }
-        },
-        {
-            "name": "Code Snippets",
-            "type": "Collection",
-            "description": "Useful code snippets repository",
-            "stack": ["JavaScript", "CSS", "HTML"],
-            "links": {
-                "code": "github.com/Michaelninder/code-snippets"
-            }
-        },
-        {
-            "name": "mtex.dev",
-            "type": "Developer Platform",
-            "description": "Platform for developers (under rework)",
-            "stack": ["Laravel", "TailwindCSS", "PHP"],
-            "links": {
-                "live": "https://mtex.dev",
-                "org": "github.com/MTEX-dev"
-            }
-        },
-        {
-            "name": "MoodFood",
-            "type": "Recipe Management",
-            "description": "Laravel-based recipe management system",
-            "stack": ["Laravel", "TailwindCSS"],
-            "links": {
-                "live": "https://moodfood.hhgkl.de"
-            }
-        }
-    ],
-    "more_in_progress": true
-}</code></pre>
+        <div class="portfolio-grid">
+            <div class="project-card">
+                <h3>dsc.pics</h3>
+                <p>Discord Image Host. Free, open-source image hosting.</p>
+                <div class="tags"><span>Laravel</span><span>Tailwind</span><span>S3</span></div>
+            </div>
+            <div class="project-card">
+                <h3>gimy.site</h3>
+                <p>Static Website Host for HTML, CSS, and JS projects.</p>
+                <div class="tags"><span>Laravel</span><span>MySQL</span><span>AWS</span></div>
+            </div>
+            <div class="project-card">
+                <h3>getmy.name</h3>
+                <p>Free portfolio API designed specifically for developers.</p>
+                <div class="tags"><span>RESTful</span><span>API</span><span>Laravel</span></div>
+            </div>
+            <div class="project-card">
+                <h3>betterbreeze</h3>
+                <p>Enhanced Laravel Breeze starter kit with better structure.</p>
+                <div class="tags"><span>PHP</span><span>Starter Kit</span></div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="reveal">
         <h2>Let's Connect</h2>
-        <pre><code class="language-json">{
-    "contact": {
-        "email": "f.ternis@xpsystems.eu",
-        "github": {
-            "username": "michaelninder",
-            "url": "https://github.com/michaelninder"
-        },
-        "x_twitter": {
-            "handle": "@micha_was_taken",
-            "url": "https://x.com/@micha_was_taken"
-        }
-    },
-    "form": {
-        "status": "temporarily_disabled",
-        "fields": ["name", "email", "subject", "message"],
-        "action": "use_direct_links"
-    }
-}</code></pre>
-        <form>
-            <input type="text" placeholder="Your Name" disabled>
-            <input type="email" placeholder="Your Email" disabled>
-            <input type="text" placeholder="Subject" disabled>
-            <textarea placeholder="Your Message" disabled></textarea>
-            <button type="submit" disabled>Send Message</button>
-        </form>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <p>Email: f.ternis@xpsystems.eu</p>
+                <p>GitHub: @michaelninder</p>
+            </div>
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" disabled>
+                <input type="email" placeholder="Your Email" disabled>
+                <textarea placeholder="Your Message" disabled></textarea>
+                <button type="submit" disabled>Form Temporarily Disabled</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <pre><code class="language-json">{
-    "copyright": "© 2025 Fabian Ternis. All rights reserved.",
-    "legal": ["Privacy Policy", "Imprint"]
-}</code></pre>
-        <button id="open-privacy">Privacy Policy</button>
-        <button id="open-imprint">Imprint</button>
+        <p>© 2025 Fabian Ternis. All rights reserved.</p>
+        <div class="footer-btns">
+            <button id="open-privacy">Privacy</button>
+            <button id="open-imprint">Imprint</button>
+        </div>
     </footer>
 
-    <div id="privacyPolicyModal">
+    <div id="modal-overlay"></div>
+    <div id="privacyPolicyModal" class="modal">
         <h3>Privacy Policy</h3>
-        <pre><code class="language-php">// Privacy Policy Configuration
-
-return [
-    'data_collection' => 'none',
-    'tracking' => false,
-    'analytics' => false,
-    'third_party_scripts' => false,
-    
-    'local_storage' => [
-        'purpose' => 'theme_preference',
-        'transmitted' => false,
-    ],
-    
-    'external_links' => [
-        'github.com',
-        'x.com',
-        // Not responsible for third-party policies
-    ],
-    
-    'contact' => 'f.ternis@xpsystems.eu',
-];</code></pre>
-        <h4>1. Data Collection</h4>
-        <p>This website is designed to be as privacy-friendly as possible. I do not actively collect any personal data from visitors. There are no tracking cookies, analytics that store personal information, or third-party advertising scripts.</p>
-        <h4>2. Theme Preference</h4>
-        <p>The only information stored locally in your browser is your theme preference (dark or light mode). This is saved in your browser's local storage and is solely used to remember your choice for a consistent user experience. This preference is not transmitted to my server or any third party.</p>
-        <h4>3. External Links</h4>
-        <p>My website contains links to external websites (e.g., GitHub, X, etc.). Please be aware that I am not responsible for the privacy practices of these other sites. I encourage you to read the privacy statements of any other site that collects personally identifiable information.</p>
-        <h4>4. Changes to this Policy</h4>
-        <p>I may update this privacy policy from time to time. Any changes will be posted on this page. You are advised to review this Privacy Policy periodically for any changes.</p>
-        <h4>5. Contact</h4>
-        <p>If you have any questions about this privacy policy, please contact me at f.ternis@xpsystems.eu.</p>
-        <button id="close-privacy">Close</button>
+        <p>This site collects no personal data. Local storage is used only for theme preferences.</p>
+        <button class="close-modal" id="close-privacy">Close</button>
     </div>
 
-    <div id="imprintModal">
+    <div id="imprintModal" class="modal">
         <h3>Imprint</h3>
-        <pre><code class="language-json">{
-    "legal_info": {
-        "section": "§ 5 TMG",
-        "name": "Fabian Ternis",
-        "address": {
-            "street": "Alzeyer Str. 97",
-            "city": "Floersheim-Dalsheim",
-            "postal": "67592",
-            "country": "Germany"
-        },
-        "contact": {
-            "email": "f.ternis@xpsystems.eu",
-            "phone": "Available upon request"
-        },
-        "content_responsible": {
-            "section": "§ 55 Abs. 2 RStV",
-            "name": "Fabian Ternis"
-        }
-    }
-}</code></pre>
-        <button id="close-imprint">Close</button>
+        <p>Fabian Ternis<br>Alzeyer Str. 97<br>67592 Floersheim-Dalsheim, Germany</p>
+        <button class="close-modal" id="close-imprint">Close</button>
     </div>
 
+    <button id="back-to-top">↑</button>
     <script src="script.js"></script>
 </body>
 </html>
