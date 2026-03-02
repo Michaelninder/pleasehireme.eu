@@ -5,438 +5,370 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>pleasehireme.eu — Fabian Ternis</title>
 <meta name="description" content="Laravel developer, serial founder, and domain collector from Rheinland-Pfalz. Available for hire.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="cursor"></div>
-<div id="cursor-ring"></div>
-
-<nav id="nav">
-  <a href="#hero" class="nav-logo">pleasehireme.eu</a>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#ventures">Ventures</a>
-    <a href="#projects">Projects</a>
-    <a href="#stack">Stack</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <div style="display:flex;align-items:center;gap:1rem">
-    <a href="#contact" class="nav-cta">hire me</a>
-    <button class="ham" id="ham" aria-label="Menu">
-      <span></span><span></span><span></span>
+<header class="site-header">
+  <div class="header-content">
+    <div class="logo">pleasehireme.eu</div>
+    <nav class="main-nav">
+      <a href="#about">About</a>
+      <a href="#companies">Companies</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
     </button>
   </div>
-</nav>
+</header>
 
-<div id="mob">
+<div class="mobile-nav" id="mobileNav">
   <a href="#about">About</a>
-  <a href="#ventures">Ventures</a>
-  <a href="#projects">Projects</a>
-  <a href="#stack">Stack</a>
+  <a href="#companies">Companies</a>
+  <a href="#work">Work</a>
   <a href="#contact">Contact</a>
 </div>
 
 <main>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-side-tag">Available · 2026</div>
-  <div class="hero-tag">
-    <span class="tag-dot"></span>
-    Open to opportunities
-  </div>
-  <h1 class="hero-title">
-    <span class="italic-line">The domain says it politely.</span>
-    Please<br><span class="yellow">Hire</span><br>Me<span class="yellow">.</span>
-  </h1>
-  <div class="hero-bot">
-    <p class="hero-desc">
-      I'm <strong>Fabian Ternis</strong> — Laravel developer, serial founder,
-      and the guy who bought this domain because regular applications
-      don't cut it. Based in <strong>Rheinland-Pfalz, Germany.</strong>
-    </p>
-    <div class="hero-stats">
-      <div class="hstat">
-        <span class="hstat-n" data-count="100">0</span>
-        <span class="hstat-l">Domains<br>Managed</span>
+  
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        Available for hire — 2026
       </div>
-      <div class="hstat">
-        <span class="hstat-n" data-count="3">0</span>
-        <span class="hstat-l">Companies<br>Founded</span>
-      </div>
-      <div class="hstat">
-        <span class="hstat-n" data-count="15">0</span>
-        <span class="hstat-l">Projects<br>Shipped</span>
+      <h1 class="hero-title">
+        The domain<br>
+        says it all.
+      </h1>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-primary">Hire me</a>
+        <a href="#about" class="btn-secondary">Learn more</a>
       </div>
     </div>
-  </div>
-  <div class="hero-scroll">
-    scroll
-    <div class="hero-scroll-line"></div>
-  </div>
-</section>
+  </section>
 
-<!-- MARQUEE -->
-<div class="mq-wrap">
-  <div class="mq-inner" id="mqi"></div>
-</div>
-
-<!-- ABOUT -->
-<section id="about" class="section">
-  <div class="container">
-    <div class="reveal"><span class="label">01 — Profile</span></div>
-    <h2 class="sec-title reveal d1">The Developer</h2>
-    <p class="sec-sub reveal d2">Full-stack with founder DNA. Rheinland-Pfalz, Germany.</p>
-    <div class="about-grid">
-      <div>
-        <div class="about-body reveal">
-          <p>I don't just write code — I build ecosystems. When I spot a gap in the market, I fill it. When I hit a problem, I solve it at scale. My work sits at the intersection of deep technical craft and entrepreneurial instinct.</p>
-          <p>Based in <strong>Floersheim-Dalsheim</strong>, I've spent years shipping Laravel applications that power real businesses. From GDPR-compliant European alternatives to developer tooling I wished existed — I build things that matter.</p>
-          <p>I've also amassed a collection of <strong>100+ web domains</strong> — partly as an investment, mostly because I keep having ideas. Browse them all at <a href="https://domainlist.fabianternis.de" target="_blank" rel="noopener">domainlist.fabianternis.de</a>.</p>
+  <!-- INTRO -->
+  <section class="intro" id="about">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-main">
+          <h2>Fabian Ternis</h2>
+          <p class="lead">Laravel developer, serial founder, and the person who bought this domain because regular job applications don't cut it.</p>
+          <p>I build things. Not just code—entire ecosystems. When I see a gap in the market, I fill it. When I hit a problem, I solve it at scale. Based in Floersheim-Dalsheim, Rheinland-Pfalz, Germany.</p>
         </div>
-        <div class="about-links reveal">
-          <a href="https://fabianternis.de" target="_blank" rel="noopener" class="alink">
-            <div class="alink-ic">~</div>
-            <span class="alink-n">fabianternis.de</span>
-            <span class="alink-t">Playful</span>
+        <div class="intro-stats">
+          <div class="stat-item">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Web domains managed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Companies founded</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Projects shipped</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPANIES -->
+  <section class="companies" id="companies">
+    <div class="container">
+      <h2 class="section-title">Companies I Founded</h2>
+      <p class="section-subtitle">Building the infrastructure I wanted to see in the world.</p>
+      
+      <div class="company-grid">
+        <article class="company-card">
+          <span class="company-status">Under Construction</span>
+          <h3>MTEX.dev</h3>
+          <p class="company-tagline">"Building the tools we actually want to use."</p>
+          <p>A developer-first ecosystem focused on simplicity, speed, and open-source transparency. Creating tools that make developers' lives easier.</p>
+          <div class="company-links">
+            <a href="https://mtex.dev" target="_blank" rel="noopener">mtex.dev →</a>
+            <a href="https://status.mtex.dev" target="_blank" rel="noopener">Status →</a>
+          </div>
+          <div class="company-products">
+            <span>getmy.name</span>
+            <span>gimy.site</span>
+            <span>nx.mtex.dev</span>
+            <span>tw.mtex.dev</span>
+            <span>diff.mtex.dev</span>
+          </div>
+        </article>
+
+        <article class="company-card">
+          <span class="company-status">Under Construction</span>
+          <h3>xpsystems.eu</h3>
+          <p class="company-tagline">European Web Infrastructure</p>
+          <p>Web hosting and infrastructure services through europehost.eu. Reliable, European-based hosting with compliance baked in from day one.</p>
+          <div class="company-links">
+            <a href="https://xpsystems.eu" target="_blank" rel="noopener">xpsystems.eu →</a>
+            <a href="https://status.xpsystems.eu" target="_blank" rel="noopener">Status →</a>
+          </div>
+          <div class="company-products">
+            <span>europehost.eu</span>
+            <span>dsc.pics</span>
+            <span>eudomains.eu</span>
+            <span>xpsys.de</span>
+          </div>
+        </article>
+
+        <article class="company-card">
+          <span class="company-status">Under Construction</span>
+          <h3>eu-data.org</h3>
+          <p class="company-tagline">"European Digital Sovereignty"</p>
+          <p>Defending Europe's data independence. Building GDPR-compliant alternatives to foreign tech giants. No backdoors. No foreign access. No compromise.</p>
+          <div class="company-links">
+            <a href="https://eu-data.org" target="_blank" rel="noopener">eu-data.org →</a>
+          </div>
+          <div class="company-products">
+            <span>eu-search.org</span>
+            <span>mail-free.eu</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <div class="container">
+      <h2 class="section-title">Selected Work</h2>
+      <p class="section-subtitle">A sample of what I've built—for clients, for myself, and for the future.</p>
+      
+      <div class="work-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="client">Client Work</button>
+        <button class="filter-btn" data-filter="mtex">MTEX Projects</button>
+        <button class="filter-btn" data-filter="eu">EU Projects</button>
+        <button class="filter-btn" data-filter="personal">Personal</button>
+      </div>
+
+      <div class="work-grid">
+        <div class="work-item" data-category="client">
+          <span class="work-status live">Live</span>
+          <h3>DogWaterDev.de</h3>
+          <p>Portfolio website for developer Ramsay Brewer</p>
+          <div class="work-tags">
+            <span>Portfolio</span>
+            <span>Client</span>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="client">
+          <span class="work-status live">Live</span>
+          <h3>Louixch.de</h3>
+          <p>Personal portfolio for Louis H.—minimal, content-first design</p>
+          <div class="work-tags">
+            <span>Portfolio</span>
+            <span>Client</span>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="client">
+          <span class="work-status live">Live</span>
+          <h3>Heimatverein-Floersheim-Dalsheim.de</h3>
+          <p>Book order system for local heritage association. Built with Laravel.</p>
+          <div class="work-tags">
+            <span>Laravel</span>
+            <span>Client</span>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="mtex">
+          <span class="work-status live">Live</span>
+          <h3>getmy.name</h3>
+          <p>Free Portfolio API by MTEX.dev. Provide your data, receive a polished portfolio endpoint.</p>
+          <div class="work-tags">
+            <span>API</span>
+            <span>Free</span>
+          </div>
+          <a href="https://getmy.name" target="_blank" rel="noopener" class="work-link">Visit →</a>
+        </div>
+
+        <div class="work-item" data-category="mtex">
+          <span class="work-status rework">Under Rework</span>
+          <h3>gimy.site</h3>
+          <p>Free static website hoster by MTEX.dev. Upload, deploy instantly.</p>
+          <div class="work-tags">
+            <span>Hosting</span>
+            <span>Free</span>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="eu">
+          <span class="work-status dev">In Development</span>
+          <h3>Web-Search.org</h3>
+          <p>Privacy-first European search engine alternative</p>
+          <div class="work-tags">
+            <span>Search</span>
+            <span>Open Source</span>
+          </div>
+          <a href="https://Web-Search.org" target="_blank" rel="noopener" class="work-link">Visit →</a>
+        </div>
+
+        <div class="work-item" data-category="eu">
+          <span class="work-status rework">Under Rework</span>
+          <h3>dsc.pics</h3>
+          <p>Free Discord OAuth image host. 150MB per user.</p>
+          <div class="work-tags">
+            <span>Discord</span>
+            <span>Image Host</span>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="personal">
+          <span class="work-status live">Live</span>
+          <h3>ivoternis.de</h3>
+          <p>Linktree-style site for my brother Ivo Ternis</p>
+          <div class="work-tags">
+            <span>Personal</span>
+          </div>
+          <a href="https://ivoternis.de" target="_blank" rel="noopener" class="work-link">Visit →</a>
+          <a href="https://ivo.ternis.eu" target="_blank" rel="noopener" class="work-link">Alternative →</a>
+        </div>
+
+        <div class="work-item" data-category="personal">
+          <span class="work-status offline">Offline</span>
+          <h3>XP-Craft.de</h3>
+          <p>My very first website. Pure HTML. For a Minecraft server. Where it all started.</p>
+          <div class="work-tags">
+            <span>First Site</span>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="client">
+          <span class="work-status offline">Offline</span>
+          <h3>MadGrower.de</h3>
+          <p>One of my firat PHP-Sites. Dynamic Layout and Content based on config(php) files. For a Minecraft servernetwork.</p>
+          <div class="work-tags">
+            <span>PHP</span>
+            <span>Client</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="work-footer">
+        And many more — <a href="https://domainlist.fabianternis.de/" target="_blank" rel="noopener">domainlist.fabianternis.de</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="stack">
+    <div class="container">
+      <h2 class="section-title">Technical Stack</h2>
+      <div class="stack-grid">
+        <div class="stack-column">
+          <h3>Backend</h3>
+          <ul>
+            <li><span>Laravel</span><span class="skill-level expert">Expert</span></li>
+            <li><span>PHP 8+</span><span class="skill-level expert">Expert</span></li>
+            <li><span>MySQL</span><span class="skill-level advanced">Advanced</span></li>
+            <li><span>Redis</span><span class="skill-level advanced">Advanced</span></li>
+            <li><span>REST APIs</span><span class="skill-level expert">Expert</span></li>
+          </ul>
+        </div>
+        <div class="stack-column">
+          <h3>Frontend</h3>
+          <ul>
+            <li><span>Tailwind CSS</span><span class="skill-level expert">Expert</span></li>
+            <li><span>JavaScript</span><span class="skill-level advanced">Advanced</span></li>
+            <li><span>HTML/CSS</span><span class="skill-level expert">Expert</span></li>
+            <li><span>Responsive Design</span><span class="skill-level expert">Expert</span></li>
+          </ul>
+        </div>
+        <div class="stack-column">
+          <h3>DevOps</h3>
+          <ul>
+            <li><span>Docker</span><span class="skill-level advanced">Advanced</span></li>
+            <li><span>Linux Servers</span><span class="skill-level expert">Expert</span></li>
+            <li><span>Git</span><span class="skill-level expert">Expert</span></li>
+            <li><span>CI/CD</span><span class="skill-level advanced">Advanced</span></li>
+          </ul>
+        </div>
+        <div class="stack-column">
+          <h3>Other</h3>
+          <ul>
+            <li><span>Domain Management</span><span class="skill-level expert">Expert</span></li>
+            <li><span>DNS Config</span><span class="skill-level expert">Expert</span></li>
+            <li><span>SSL/TLS</span><span class="skill-level expert">Expert</span></li>
+            <li><span>GDPR Compliance</span><span class="skill-level advanced">Advanced</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-main">
+          <h2>Let's work together.</h2>
+          <p>Open to full-time roles, freelance projects, and interesting collaborations. Remote-friendly.</p>
+          <div class="availability">
+            <span class="avail-badge">Full-time</span>
+            <span class="avail-badge">Freelance</span>
+            <span class="avail-badge">Remote</span>
+          </div>
+        </div>
+        <div class="contact-methods">
+          <a href="mailto:f.ternis@xpsystems.eu" class="contact-card primary">
+            <span class="contact-label">Email (preferred)</span>
+            <span class="contact-value">f.ternis@xpsystems.eu</span>
           </a>
-          <a href="https://fabianternis.dev" target="_blank" rel="noopener" class="alink">
-            <div class="alink-ic">&lt;/&gt;</div>
-            <span class="alink-n">fabianternis.dev</span>
-            <span class="alink-t">Pro</span>
+          <a href="https://github.com/michaelninder" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/michaelninder</span>
           </a>
-          <a href="https://fabian.ternis.eu" target="_blank" rel="noopener" class="alink">
-            <div class="alink-ic">✦</div>
-            <span class="alink-n">fabian.ternis.eu</span>
-            <span class="alink-t">Personal</span>
-          </a>
-          <a href="https://github.com/michaelninder" target="_blank" rel="noopener" class="alink">
-            <div class="alink-ic">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </div>
-            <span class="alink-n">github.com/michaelninder</span>
-            <span class="alink-t">Code</span>
+          <a href="https://fabianternis.dev" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-label">Portfolio</span>
+            <span class="contact-value">fabianternis.dev</span>
           </a>
         </div>
       </div>
-      <div class="about-right">
-        <div class="fact reveal d1">
-          <div class="fact-n" data-count="100">0</div>
-          <div class="fact-l">Web domains bought and managed</div>
-          <div class="fact-s">→ domainlist.fabianternis.de</div>
-        </div>
-        <div class="fact reveal d2">
-          <div class="fact-n" data-count="3">0</div>
-          <div class="fact-l">Companies founded</div>
-          <div class="fact-s">MTEX.dev · xpsystems.eu · eu-data.org</div>
-        </div>
-        <div class="fact reveal d3">
-          <div class="fact-n">EU</div>
-          <div class="fact-l">European digital sovereignty focus</div>
-          <div class="fact-s">GDPR-compliant · built &amp; hosted in Europe</div>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
-
-<!-- VENTURES -->
-<section id="ventures" class="section ventures-section">
-  <div class="container">
-    <div class="reveal"><span class="label">02 — Ventures</span></div>
-    <h2 class="sec-title reveal d1">Companies I Founded</h2>
-    <p class="sec-sub reveal d2">Building the infrastructure I wanted to see in the world.</p>
-    <div class="vc-grid reveal">
-
-      <article class="vc">
-        <div class="vc-badge"><span class="d-amber"></span>Under Construction</div>
-        <h3 class="vc-name">MTEX.dev</h3>
-        <p class="vc-tag">"Building the tools we actually want to use."</p>
-        <p class="vc-desc">A developer-first ecosystem focused on simplicity, speed, and open-source transparency. Creating tools that make developers' lives easier — starting with the ones I needed myself.</p>
-        <div class="vc-links">
-          <a href="https://mtex.dev" target="_blank" rel="noopener" class="vc-lnk hl">mtex.dev ↗</a>
-          <a href="https://status.mtex.dev" target="_blank" rel="noopener" class="vc-lnk">status ↗</a>
-        </div>
-        <div class="vc-products">
-          <div class="vc-prod-label">Products</div>
-          <div class="vc-tags">
-            <span class="vtag">getmy.name</span>
-            <span class="vtag">gimy.site</span>
-            <span class="vtag">nx.mtex.dev</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="vc">
-        <div class="vc-badge"><span class="d-amber"></span>Under Construction</div>
-        <h3 class="vc-name">xpsystems.eu</h3>
-        <p class="vc-tag">European Web Infrastructure</p>
-        <p class="vc-desc">Web hosting and infrastructure services through europehost.eu. Reliable, European-based hosting with local support and compliance baked in from day one.</p>
-        <div class="vc-links">
-          <a href="https://xpsystems.eu" target="_blank" rel="noopener" class="vc-lnk hl">xpsystems.eu ↗</a>
-          <a href="https://status.xpsytems.eu" target="_blank" rel="noopener" class="vc-lnk">status ↗</a>
-        </div>
-        <div class="vc-products">
-          <div class="vc-prod-label">Operates</div>
-          <div class="vc-tags">
-            <span class="vtag">europehost.eu</span>
-            <span class="vtag">dsc.pics</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="vc">
-        <div class="vc-badge"><span class="d-amber"></span>Under Construction</div>
-        <h3 class="vc-name">eu-data.org</h3>
-        <p class="vc-tag">"European Digital Sovereignty"</p>
-        <p class="vc-desc">Defending Europe's data independence. Building GDPR-compliant alternatives to foreign tech giants. No backdoors. No foreign access. No compromise.</p>
-        <div class="vc-links">
-          <a href="https://eu-data.org" target="_blank" rel="noopener" class="vc-lnk hl">eu-data.org ↗</a>
-        </div>
-        <div class="vc-products">
-          <div class="vc-prod-label">Ecosystem</div>
-          <div class="vc-tags">
-            <span class="vtag">eu-search.org</span>
-            <span class="vtag">mail-free.eu</span>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <div class="container">
-    <div class="reveal"><span class="label">03 — Projects</span></div>
-    <h2 class="sec-title reveal d1">Selected Work</h2>
-    <p class="sec-sub reveal d2">A sample of what I've built — for clients, for fun, and for the future.</p>
-    <div class="filter-row reveal">
-      <button class="fb active" data-filter="all">All</button>
-      <button class="fb" data-filter="client">Client</button>
-      <button class="fb" data-filter="mtex">MTEX.dev</button>
-      <button class="fb" data-filter="eu">EU Projects</button>
-      <button class="fb" data-filter="personal">Personal</button>
-    </div>
-    <div class="proj-grid reveal">
-      <article class="pc" data-category="client">
-        <div class="pc-status"><span class="dl"></span>Live</div>
-        <div class="pc-name">DogWaterDev.de</div>
-        <p class="pc-desc">Portfolio website for developer Ramsay Brewer, showcasing their work and projects.</p>
-        <div class="pc-tags"><span class="ptag">Portfolio</span><span class="ptag">Client</span></div>
-      </article>
-      <article class="pc" data-category="client">
-        <div class="pc-status"><span class="dl"></span>Live</div>
-        <div class="pc-name">Louixch.de</div>
-        <p class="pc-desc">Personal portfolio for Louis H. — minimal, content-first design that lets the work speak.</p>
-        <div class="pc-tags"><span class="ptag">Portfolio</span><span class="ptag">Client</span></div>
-      </article>
-      <article class="pc" data-category="client">
-        <div class="pc-status"><span class="dl"></span>Live</div>
-        <div class="pc-name">Heimatverein-Floersheim-Dalsheim.de</div>
-        <p class="pc-desc">Book order system for a local heritage association. Handles orders &amp; inventory. Built with Laravel.</p>
-        <div class="pc-tags"><span class="ptag">Laravel</span><span class="ptag">PHP</span><span class="ptag">Client</span></div>
-      </article>
-      <article class="pc" data-category="mtex">
-        <div class="pc-status"><span class="dl"></span>Live</div>
-        <div class="pc-name">getmy.name</div>
-        <p class="pc-desc">Free Portfolio API by MTEX.dev. Provide your data, receive a polished portfolio endpoint.</p>
-        <div class="pc-tags"><span class="ptag">Laravel</span><span class="ptag">API</span><span class="ptag">Free</span></div>
-        <a href="https://getmy.name" target="_blank" rel="noopener" class="pc-link">Visit</a>
-      </article>
-      <article class="pc" data-category="mtex">
-        <div class="pc-status"><span class="dw"></span>Under Rework</div>
-        <div class="pc-name">gimy.site</div>
-        <p class="pc-desc">Free static website hoster by MTEX.dev. Upload your static sites, get instant deployment.</p>
-        <div class="pc-tags"><span class="ptag">Laravel</span><span class="ptag">Hosting</span><span class="ptag">Free</span></div>
-      </article>
-      <article class="pc" data-category="eu">
-        <div class="pc-status"><span class="dw"></span>Under Development</div>
-        <div class="pc-name">Web-Search.org</div>
-        <p class="pc-desc">Free, open-source search engine with optional tracking. A privacy-first European alternative.</p>
-        <div class="pc-tags"><span class="ptag">Search</span><span class="ptag">Privacy</span><span class="ptag">Open Source</span></div>
-      </article>
-      <article class="pc" data-category="eu">
-        <div class="pc-status"><span class="dw"></span>Under Rework — May Be Discontinued</div>
-        <div class="pc-name">dsc.pics</div>
-        <p class="pc-desc">Free Discord OAuth image host. 150MB per user. Hosted on europehost.eu infrastructure.</p>
-        <div class="pc-tags"><span class="ptag">Discord</span><span class="ptag">OAuth</span><span class="ptag">Image Host</span></div>
-      </article>
-      <article class="pc" data-category="personal">
-        <div class="pc-status"><span class="dl"></span>Live</div>
-        <div class="pc-name">ivoternis.de</div>
-        <p class="pc-desc">Linktree-style site for my brother Ivo Ternis. Also at ivo.ternis.eu. Simple, mobile-first.</p>
-        <div class="pc-tags"><span class="ptag">Personal</span><span class="ptag">Linktree</span></div>
-        <a href="https://ivo.ternis.eu" target="_blank" rel="noopener" class="pc-link">Visit</a>
-      </article>
-      <article class="pc" data-category="personal">
-        <div class="pc-status"><span class="dl"></span>Live</div>
-        <div class="pc-name">api-sandbox.de</div>
-        <p class="pc-desc">API playground for testing and experimentation. A testing ground for various integrations.</p>
-        <div class="pc-tags"><span class="ptag">API</span><span class="ptag">DevTools</span></div>
-      </article>
-      <article class="pc" data-category="personal">
-        <div class="pc-status"><span class="do"></span>Offline</div>
-        <div class="pc-name">MadGrower.de</div>
-        <p class="pc-desc">Landing page for Minecraft server "MadGrower" with server status integration. PHP. Now offline.</p>
-        <div class="pc-tags"><span class="ptag">Minecraft</span><span class="ptag">PHP</span></div>
-      </article>
-      <article class="pc" data-category="personal">
-        <div class="pc-status"><span class="do"></span>Offline — My First Ever Site</div>
-        <div class="pc-name">XP-Craft.de</div>
-        <p class="pc-desc">My very first website. Pure HTML. For a Minecraft server. Where it all started.</p>
-        <div class="pc-tags"><span class="ptag">HTML</span><span class="ptag">First Site</span></div>
-      </article>
-    </div>
-    <p class="proj-more reveal">
-      And many, many more — <a href="https://domainlist.fabianternis.de/" target="_blank" rel="noopener">domainlist.fabianternis.de</a>
-    </p>
-  </div>
-</section>
-
-<!-- STACK -->
-<section id="stack" class="section stack-section">
-  <div class="container">
-    <div class="reveal"><span class="label">04 — Stack</span></div>
-    <h2 class="sec-title reveal d1">Technical Stack</h2>
-    <p class="sec-sub reveal d2">The tools I reach for when building.</p>
-    <div class="stack-inner reveal">
-      <div class="sc">
-        <div class="sc-head"><div class="sc-ic ic-be">BE</div><span class="sc-title">Backend</span></div>
-        <ul>
-          <li><span class="sc-item">Laravel</span><span class="sc-lv lv-e">Expert</span></li>
-          <li><span class="sc-item">PHP 8+</span><span class="sc-lv lv-e">Expert</span></li>
-          <li><span class="sc-item">MySQL</span><span class="sc-lv lv-a">Advanced</span></li>
-          <li><span class="sc-item">Redis</span><span class="sc-lv lv-a">Advanced</span></li>
-          <li><span class="sc-item">REST APIs</span><span class="sc-lv lv-e">Expert</span></li>
-          <li><span class="sc-item">API Design</span><span class="sc-lv lv-e">Expert</span></li>
-        </ul>
-      </div>
-      <div class="sc">
-        <div class="sc-head"><div class="sc-ic ic-fe">FE</div><span class="sc-title">Frontend</span></div>
-        <ul>
-          <li><span class="sc-item">Tailwind CSS</span><span class="sc-lv lv-e">Expert</span></li>
-          <li><span class="sc-item">JavaScript</span><span class="sc-lv lv-a">Advanced</span></li>
-          <li><span class="sc-item">HTML5 / CSS3</span><span class="sc-lv lv-e">Expert</span></li>
-          <li><span class="sc-item">Responsive Design</span><span class="sc-lv lv-e">Expert</span></li>
-        </ul>
-      </div>
-      <div class="sc">
-        <div class="sc-head"><div class="sc-ic ic-do">DO</div><span class="sc-title">DevOps</span></div>
-        <ul>
-          <li><span class="sc-item">Docker</span><span class="sc-lv lv-a">Advanced</span></li>
-          <li><span class="sc-item">Linux Servers</span><span class="sc-lv lv-e">Expert</span></li>
-          <li><span class="sc-item">Git</span><span class="sc-lv lv-e">Expert</span></li>
-          <li><span class="sc-item">CI/CD</span><span class="sc-lv lv-a">Advanced</span></li>
-          <li><span class="sc-item">Cloud Infra</span><span class="sc-lv lv-a">Advanced</span></li>
-        </ul>
-      </div>
-      <div class="sc">
-        <div class="sc-head"><div class="sc-ic ic-ot">OT</div><span class="sc-title">Other</span></div>
-        <ul>
-          <li><span class="sc-item">Domain Mgmt</span><span class="sc-lv lv-e">Expert</span></li>
-          <li><span class="sc-item">DNS Config</span><span class="sc-lv lv-e">Expert</span></li>
-          <li><span class="sc-item">SSL / TLS</span><span class="sc-lv lv-e">Expert</span></li>
-          <li><span class="sc-item">GDPR Compliance</span><span class="sc-lv lv-a">Advanced</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <div class="container">
-    <div class="reveal"><span class="label">05 — Contact</span></div>
-    <div class="contact-wrap">
-      <div>
-        <div class="contact-big reveal">
-          Let's<br>
-          <span class="i">build</span><br>
-          some<span class="y">thing</span><span class="y">.</span>
-        </div>
-        <p class="sec-sub reveal" style="margin-top:1.5rem">
-          Open to full-time roles, freelance projects, and interesting collaborations. Remote-friendly.
-        </p>
-        <div class="avail-row reveal">
-          <span class="av"><span class="av-d"></span>Full-time</span>
-          <span class="av"><span class="av-d"></span>Freelance</span>
-          <span class="av"><span class="av-d"></span>Remote</span>
-        </div>
-      </div>
-      <div class="contact-right reveal">
-        <a href="mailto:f.ternis@xpsystems.eu" class="cm featured">
-          <div class="cm-ic">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
-            </svg>
-          </div>
-          <div class="cm-info">
-            <span class="cm-name">Email — preferred</span>
-            <div class="cm-val">f.ternis@xpsystems.eu</div>
-          </div>
-        </a>
-        <a href="https://github.com/michaelninder" target="_blank" rel="noopener" class="cm">
-          <div class="cm-ic">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          </div>
-          <div class="cm-info">
-            <span class="cm-name">GitHub</span>
-            <div class="cm-val">github.com/michaelninder</div>
-          </div>
-        </a>
-        <a href="https://fabianternis.dev" target="_blank" rel="noopener" class="cm">
-          <div class="cm-ic">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-          </div>
-          <div class="cm-info">
-            <span class="cm-name">Portfolio</span>
-            <div class="cm-val">fabianternis.dev</div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 </main>
 
-<footer>
-  <div class="footer-inner">
-    <div class="fl"><strong>pleasehireme.eu</strong><br>Fabian Ternis · Rheinland-Pfalz, Germany · 2026</div>
-    <div class="flnks">
-      <button id="op">Privacy</button>
-      <button id="oi">Imprint</button>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-info">
+        <strong>Fabian Ternis</strong>
+        <p>Rheinland-Pfalz, Germany · 2026</p>
+      </div>
+      <div class="footer-links">
+        <button id="privacyBtn">Privacy</button>
+        <button id="imprintBtn">Imprint</button>
+      </div>
+      <!--div class="footer-tech">
+        Laravel · Hosted in Europe
+      </div-->
     </div>
-    <div class="fr">Laravel · Hosted in Europe</div>
   </div>
 </footer>
 
-<button id="btt" aria-label="Back to top">
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-    <line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/>
-  </svg>
-</button>
+<!-- Modals -->
+<div class="modal-overlay" id="modalOverlay"></div>
 
-<div id="ov"></div>
-
-<div id="pm" class="modal">
-  <div class="mh">
+<div class="modal" id="privacyModal">
+  <div class="modal-header">
     <h3>Privacy Policy</h3>
-    <button class="mc" data-close="pm">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
+    <button class="modal-close" data-modal="privacyModal">×</button>
   </div>
-  <div class="mb">
-    <p><strong style="color:var(--white)">Your privacy matters.</strong></p>
+  <div class="modal-body">
+    <p><strong>Your privacy matters.</strong></p>
     <p>This site is designed with privacy in mind:</p>
     <ul>
       <li>No tracking cookies</li>
@@ -447,17 +379,17 @@
   </div>
 </div>
 
-<div id="im" class="modal">
-  <div class="mh">
+<div class="modal" id="imprintModal">
+  <div class="modal-header">
     <h3>Imprint / Impressum</h3>
-    <button class="mc" data-close="im">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
+    <button class="modal-close" data-modal="imprintModal">×</button>
   </div>
-  <div class="mb">
+  <div class="modal-body">
     <address>
-      <strong style="color:var(--white)">Fabian Ternis</strong><br>
-      Alzeyer Str. 97<br>67592 Floersheim-Dalsheim<br>Germany
+      <strong>Fabian Ternis</strong><br>
+      Alzeyer Str. 97<br>
+      67592 Floersheim-Dalsheim<br>
+      Germany
     </address>
     <p>Email: <a href="mailto:f.ternis@xpsystems.eu">f.ternis@xpsystems.eu</a></p>
   </div>
