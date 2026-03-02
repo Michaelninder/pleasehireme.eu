@@ -3,832 +3,737 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabian Ternis - Laravel Developer | pleasehireme.eu</title>
-    <meta name="description" content="Fabian Ternis - Laravel Developer, Web Enthusiast, and Problem Solver. Owner of XPsystems.eu and europehost.eu">
-    <meta name="keywords" content="Fabian Ternis, Laravel Developer, Web Developer, PHP Developer, Full-stack Developer, XPsystems.eu, europehost.eu, mtex.dev, pleasehireme.eu, web solutions, software development, custom web applications, API development, backend development, frontend development, HTML, CSS, JavaScript, Tailwind CSS, MySQL, AWS, Git, GitHub, open-source, web design, responsive design, developer portfolio, hire Laravel developer, freelance Laravel developer">
-    <meta name="author" content="Fabian Ternis">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Fabian Ternis - Laravel Developer | pleasehireme.eu">
-    <meta property="og:description" content="Fabian Ternis - Laravel Developer, Web Enthusiast, and Problem Solver. Owner of XPsystems.eu and europehost.eu">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pleasehireme.eu/">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Fabian Ternis - Laravel Developer | pleasehireme.eu">
-    <meta name="twitter:description" content="Fabian Ternis - Laravel Developer, Web Enthusiast, and Problem Solver. Owner of XPsystems.eu and europehost.eu">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-        }
-    </script>
+    <title>pleasehireme.eu | Fabian Ternis - Laravel Developer & Founder</title>
+    <meta name="description" content="Full-stack Laravel developer from Germany. Founder of MTEX.dev, xpsystems.eu, and eu-data.org. 100+ domains managed. Ready for new challenges.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="transition-colors duration-300 dark:bg-slate-950 bg-gray-50 dark:text-gray-900">
-    <nav id="navbar" class="fixed top-0 w-full z-50 px-4 py-3 transition-all duration-300 sm:top-4 sm:left-1/2 sm:w-auto sm:rounded-full sm:px-6 sm:-translate-x-1/2">
-        <div class="max-w-7xl mx-auto flex items-center justify-between sm:justify-center sm:space-x-6">
-            <div class="hidden sm:flex items-center space-x-6">
-                <a href="#home" class="nav-link px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 active">Home</a>
-                <a href="#about" class="nav-link px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-blue-100 dark:hover:bg-blue-900/50">About</a>
-                <a href="#skills" class="nav-link px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-blue-100 dark:hover:bg-blue-900/50">Skills</a>
-                <a href="#portfolio" class="nav-link px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-blue-100 dark:hover:bg-blue-900/50">Portfolio</a>
-                <a href="#contact" class="nav-link px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-blue-100 dark:hover:bg-blue-900/50">Contact</a>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                pleasehireme
+                <span class="logo-suffix">.eu</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-links">
+                <a href="#pitch" data-section="pitch">Pitch</a>
+                <a href="#profile" data-section="profile">Profile</a>
+                <a href="#ventures" data-section="ventures">Ventures</a>
+                <a href="#projects" data-section="projects">Projects</a>
+                <a href="#stack" data-section="stack">Stack</a>
+                <a href="#contact" data-section="contact">Hire</a>
             </div>
-
-            <div class="flex items-center space-x-4">
-                <button id="mobile-menu-toggle" class="p-2 rounded-full sm:hidden dark:text-gray-200">
-                    <i class="bi bi-list text-2xl"></i>
+            <div class="nav-actions">
+                <a href="https://github.com/michaelninder" target="_blank" rel="noopener" class="nav-link-icon" aria-label="GitHub Profile">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <button id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
                 </button>
-
-                <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-200 dark:hover:bg-blue-800 transition-all duration-300 border-2 border-transparent">
-                    <i class="bi bi-sun-fill dark:hidden"></i>
-                    <i class="bi bi-moon-fill hidden dark:block"></i>
+                <button id="mobile-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
             </div>
         </div>
     </nav>
 
-    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white/95 dark:bg-slate-950/95 backdrop-blur-md z-40 transform -translate-x-full transition-transform duration-300 sm:hidden">
-        <div class="flex flex-col items-center justify-center h-full space-y-8">
-            <a href="#home" class="mobile-nav-link text-2xl font-medium dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Home</a>
-            <a href="#about" class="mobile-nav-link text-2xl font-medium dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">About</a>
-            <a href="#skills" class="mobile-nav-link text-2xl font-medium dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Skills</a>
-            <a href="#portfolio" class="mobile-nav-link text-2xl font-medium dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Portfolio</a>
-            <a href="#contact" class="mobile-nav-link text-2xl font-medium dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+    <div id="mobile-menu">
+        <div class="mobile-menu-inner">
+            <a href="#pitch">Pitch</a>
+            <a href="#profile">Profile</a>
+            <a href="#ventures">Ventures</a>
+            <a href="#projects">Projects</a>
+            <a href="#stack">Stack</a>
+            <a href="#contact">Hire</a>
+            <a href="https://github.com/michaelninder" target="_blank" rel="noopener">GitHub</a>
         </div>
     </div>
 
-    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10"></div>
-        <div class="text-center z-10 px-4">
-            <div class="reveal-on-scroll">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                    Hello, I'm Fabian Ternis
+    <main>
+        <section id="pitch" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-badge">
+                    <span class="status-dot"></span>
+                    <span>Available for Opportunities</span>
+                    <span class="year">2026</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="line line-1">The domain says</span>
+                    <span class="line line-2">"please hire me"</span>
+                    <span class="line line-3">but my work <em>screams</em> it.</span>
                 </h1>
-                <p class="text-xl md:text-2xl mb-8 text-gray-600 dark:text-gray-400">
-                    Laravel Developer | Web Enthusiast | Problem Solver
+                
+                <p class="hero-subtitle">
+                    I'm <strong>Fabian Ternis</strong> — Laravel developer, serial founder, 
+                    and the person who bought this domain because regular job applications 
+                    just weren't cutting it.
                 </p>
-                <a href="#portfolio" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                    View My Work
-                    <i class="bi bi-arrow-right ml-2"></i>
-                </a>
-            </div>
-        </div>
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <i class="bi bi-chevron-down text-2xl text-gray-400"></i>
-        </div>
-    </section>
 
-    <section id="about" class="py-20 px-4">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-16 dark:text-white reveal-on-scroll">About Me</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6 reveal-on-scroll">
-                    <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                        I'm a passionate Laravel developer with a deep love for crafting elegant web solutions. With years of experience in full-stack development, I specialize in building scalable, maintainable applications that solve real-world problems.
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" data-count="100">0</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">Domains Managed</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-value" data-count="3">0</span>
+                        <span class="stat-label">Companies Founded</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-value" data-count="15">0</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">Projects Shipped</span>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Let's Talk</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12 5 19 12 12 19"/>
+                        </svg>
+                    </a>
+                    <a href="#projects" class="btn btn-ghost">View Portfolio</a>
+                </div>
+            </div>
+            
+            <div class="hero-scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <section id="profile" class="profile-section">
+            <div class="section-container">
+                <header class="section-header">
+                    <span class="section-number">01</span>
+                    <h2 class="section-title">The Developer</h2>
+                    <p class="section-subtitle">Rheinland-Pfalz, Germany</p>
+                </header>
+
+                <div class="profile-grid">
+                    <div class="profile-main card">
+                        <div class="card-header">
+                            <h3>Full-Stack Developer with Founder DNA</h3>
+                        </div>
+                        <p>
+                            I don't just write code — I build ecosystems. When I see a gap in the 
+                            market, I fill it. When I encounter a problem, I solve it at scale. 
+                            My approach combines deep technical expertise with entrepreneurial vision.
+                        </p>
+                        <p>
+                            Based in <strong>Floersheim-Dalsheim, Rheinland-Pfalz</strong>, I've spent 
+                            years building Laravel applications that power real businesses. From 
+                            GDPR-compliant European alternatives to developer tools I wished existed — 
+                            I ship products that matter.
+                        </p>
+                        <div class="profile-links">
+                            <a href="https://fabianternis.de" target="_blank" rel="noopener" class="profile-link">
+                                <span class="link-icon">~</span>
+                                <span>fabianternis.de</span>
+                                <span class="link-type">Playful Portfolio</span>
+                            </a>
+                            <a href="https://fabianternis.dev" target="_blank" rel="noopener" class="profile-link">
+                                <span class="link-icon">*</span>
+                                <span>fabianternis.dev</span>
+                                <span class="link-type">Professional</span>
+                            </a>
+                            <a href="https://fabian.ternis.eu" target="_blank" rel="noopener" class="profile-link">
+                                <span class="link-icon">+</span>
+                                <span>fabian.ternis.eu</span>
+                                <span class="link-type">Personal</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="profile-side">
+                        <div class="card profile-highlight">
+                            <div class="highlight-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                    <path d="M2 17l10 5 10-5"/>
+                                    <path d="M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <h4>100+ Domains</h4>
+                            <p>Bought and managed — proof at domainlist.fabianternis.de</p>
+                        </div>
+                        
+                        <div class="card profile-highlight">
+                            <div class="highlight-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="2" y1="12" x2="22" y2="12"/>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                </svg>
+                            </div>
+                            <h4>European Focus</h4>
+                            <p>Building GDPR-compliant, sovereign alternatives</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ventures" class="ventures-section">
+            <div class="section-container">
+                <header class="section-header">
+                    <span class="section-number">02</span>
+                    <h2 class="section-title">Companies I Founded</h2>
+                    <p class="section-subtitle">Building the infrastructure I wanted to see in the world</p>
+                </header>
+
+                <div class="ventures-grid">
+                    <article class="venture-card card" data-venture="mtex">
+                        <div class="venture-header">
+                            <div class="venture-logo">MTEX</div>
+                            <span class="venture-status status-construction">Under Construction</span>
+                        </div>
+                        <h3 class="venture-name">MTEX.dev</h3>
+                        <p class="venture-tagline">"Building the tools we actually want to use."</p>
+                        <p class="venture-description">
+                            A developer-first ecosystem focused on simplicity, speed, and 
+                            open-source transparency. Creating the tools that make other 
+                            developers' lives easier.
+                        </p>
+                        <div class="venture-links">
+                            <a href="https://mtex.dev" target="_blank" rel="noopener" class="venture-link">
+                                <span>Landing Page</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                            </a>
+                            <a href="https://status.mtex.dev" target="_blank" rel="noopener" class="venture-link secondary">
+                                <span>Status</span>
+                            </a>
+                        </div>
+                        <div class="venture-projects">
+                            <span class="mini-label">Shipped:</span>
+                            <span class="mini-tag">getmy.name</span>
+                            <span class="mini-tag">gimy.site</span>
+                            <span class="mini-tag">nx.mtex.dev</span>
+                        </div>
+                    </article>
+
+                    <article class="venture-card card" data-venture="xpsystems">
+                        <div class="venture-header">
+                            <div class="venture-logo">XPS</div>
+                            <span class="venture-status status-construction">Under Construction</span>
+                        </div>
+                        <h3 class="venture-name">xpsystems.eu</h3>
+                        <p class="venture-tagline">European Web Infrastructure</p>
+                        <p class="venture-description">
+                            Web hosting and provider services through europehost.eu. 
+                            Delivering reliable, European-based hosting solutions 
+                            with local support and compliance.
+                        </p>
+                        <div class="venture-links">
+                            <a href="https://xpsystems.eu" target="_blank" rel="noopener" class="venture-link">
+                                <span>xpsystems.eu</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                            </a>
+                            <a href="https://status.xpsytems.eu" target="_blank" rel="noopener" class="venture-link secondary">
+                                <span>Status</span>
+                            </a>
+                        </div>
+                        <div class="venture-projects">
+                            <span class="mini-label">Operates:</span>
+                            <span class="mini-tag">europehost.eu</span>
+                            <span class="mini-tag">dsc.pics</span>
+                        </div>
+                    </article>
+
+                    <article class="venture-card card featured" data-venture="eudata">
+                        <div class="venture-header">
+                            <div class="venture-logo">EUD</div>
+                            <span class="venture-status status-construction">Under Construction</span>
+                        </div>
+                        <h3 class="venture-name">eu-data.org</h3>
+                        <p class="venture-tagline">"European Digital Sovereignty"</p>
+                        <p class="venture-description">
+                            Defending Europe's data independence. Building GDPR-compliant 
+                            alternatives to foreign tech giants. No backdoors. No foreign access.
+                        </p>
+                        <div class="venture-links">
+                            <a href="https://eu-data.org" target="_blank" rel="noopener" class="venture-link">
+                                <span>eu-data.org</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="venture-projects">
+                            <span class="mini-label">Ecosystem:</span>
+                            <span class="mini-tag">eu-search.org</span>
+                            <span class="mini-tag">mail-free.eu</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="section-container">
+                <header class="section-header">
+                    <span class="section-number">03</span>
+                    <h2 class="section-title">Selected Projects</h2>
+                    <p class="section-subtitle">Things I've built — for clients, for fun, and for the future</p>
+                </header>
+
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="personal">Personal</button>
+                    <button class="filter-btn" data-filter="client">Client</button>
+                    <button class="filter-btn" data-filter="mtex">MTEX.dev</button>
+                    <button class="filter-btn" data-filter="eu">EU Projects</button>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card card" data-category="client" data-status="live">
+                        <div class="project-status">
+                            <span class="status-indicator live"></span>
+                            <span>Live</span>
+                        </div>
+                        <h3 class="project-name">DogWaterDev.de</h3>
+                        <p class="project-description">
+                            Portfolio website for Ramsay Brewer — showcasing development 
+                            work and personal projects.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Portfolio</span>
+                            <span class="tag">Client</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card card" data-category="client" data-status="live">
+                        <div class="project-status">
+                            <span class="status-indicator live"></span>
+                            <span>Live</span>
+                        </div>
+                        <h3 class="project-name">Louixch.de</h3>
+                        <p class="project-description">
+                            Portfolio and personal site for Louis H. — clean, minimal 
+                            design focused on content.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Portfolio</span>
+                            <span class="tag">Client</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card card" data-category="client" data-status="live">
+                        <div class="project-status">
+                            <span class="status-indicator live"></span>
+                            <span>Live</span>
+                        </div>
+                        <h3 class="project-name">Heimatverein-Floersheim-Dalsheim.de</h3>
+                        <p class="project-description">
+                            Book-order site for a local heritage association. Built with 
+                            Laravel PHP to handle orders and inventory.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">Client</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card card" data-category="mtex" data-status="live">
+                        <div class="project-status">
+                            <span class="status-indicator live"></span>
+                            <span>Live</span>
+                        </div>
+                        <h3 class="project-name">getmy.name</h3>
+                        <p class="project-description">
+                            FREE Portfolio API by MTEX.dev. Provide your data, get a 
+                            beautiful portfolio endpoint. Laravel-powered.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">API</span>
+                            <span class="tag">Free</span>
+                        </div>
+                        <a href="https://getmy.name" target="_blank" rel="noopener" class="project-link">Visit →</a>
+                    </article>
+
+                    <article class="project-card card" data-category="mtex" data-status="wip">
+                        <div class="project-status">
+                            <span class="status-indicator wip"></span>
+                            <span>In Development</span>
+                        </div>
+                        <h3 class="project-name">gimy.site</h3>
+                        <p class="project-description">
+                            FREE static website hoster. Upload your static sites, 
+                            get instant deployment. Currently under rework.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Hosting</span>
+                            <span class="tag">Free</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card card" data-category="eu" data-status="wip">
+                        <div class="project-status">
+                            <span class="status-indicator wip"></span>
+                            <span>In Development</span>
+                        </div>
+                        <h3 class="project-name">dsc.pics</h3>
+                        <p class="project-description">
+                            FREE Discord OAuth image host — 150MB per user. Hosted on 
+                            europehost.eu infrastructure. May be discontinued.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Discord</span>
+                            <span class="tag">OAuth</span>
+                            <span class="tag">Image Host</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card card" data-category="personal" data-status="live">
+                        <div class="project-status">
+                            <span class="status-indicator live"></span>
+                            <span>Live</span>
+                        </div>
+                        <h3 class="project-name">ivoternis.de</h3>
+                        <p class="project-description">
+                            Linktree-style site for Ivo Ternis (my brother). Simple, 
+                            effective, mobile-first design.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Personal</span>
+                            <span class="tag">Linktree</span>
+                        </div>
+                        <a href="https://ivo.ternis.eu" target="_blank" rel="noopener" class="project-link">Also at ivo.ternis.eu →</a>
+                    </article>
+
+                    <article class="project-card card" data-category="eu" data-status="wip">
+                        <div class="project-status">
+                            <span class="status-indicator wip"></span>
+                            <span>In Development</span>
+                        </div>
+                        <h3 class="project-name">Web-Search.org</h3>
+                        <p class="project-description">
+                            Free search engine with optional tracking. Open-source, 
+                            privacy-respecting alternative to mainstream search.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Search</span>
+                            <span class="tag">Privacy</span>
+                            <span class="tag">Open Source</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card card" data-category="personal" data-status="live">
+                        <div class="project-status">
+                            <span class="status-indicator live"></span>
+                            <span>Live</span>
+                        </div>
+                        <h3 class="project-name">api-sandbox.de</h3>
+                        <p class="project-description">
+                            API playground for testing and experimentation. Currently 
+                            serving as a testing ground for various integrations.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">API</span>
+                            <span class="tag">DevTools</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card card" data-category="client" data-status="offline">
+                        <div class="project-status">
+                            <span class="status-indicator offline"></span>
+                            <span>Offline</span>
+                        </div>
+                        <h3 class="project-name">MadGrower.de</h3>
+                        <p class="project-description">
+                            Website for Minecraft server "MadGrower". PHP-based 
+                            landing page with server status integration.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Minecraft</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">Gaming</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="projects-note">
+                    <p>
+                        <strong>And many more...</strong> This is just a selection. 
+                        Check out <a href="https://domainlist.fabianternis.de/" target="_blank" rel="noopener">
+                        domainlist.fabianternis.de</a> for the full picture.
                     </p>
-                    <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                        As the owner of <a href="https://xpsystems.eu" class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium">XPsystems.eu</a> and <a href="https://europehost.eu" class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium">europehost.eu</a>, I bring both technical expertise and business acumen to every project. I also created <a href="https://mtex.dev" class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium">mtex.dev</a>, a platform dedicated to creating free, open-source websites for developers using Laravel PHP.
-                    </p>
-                    <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                        My work spans from enterprise applications to creative web experiences. I believe in modern development practices, clean code architecture, and delivering exceptional user experiences. Check out my portfolios at <a href="https://fternis.de" class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium">fternis.de</a> and <a href="https://fabianternis.de" class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium">fabianternis.de</a> to see my latest work.
-                    </p>
                 </div>
-                <div class="flex justify-center reveal-on-scroll">
-                    <div class="w-80 h-80 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-full flex items-center justify-center">
-                        <div class="w-64 h-64 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center shadow-xl">
-                            <i class="bi bi-code-slash text-6xl text-blue-600"></i>
+            </div>
+        </section>
+
+        <section id="stack" class="stack-section">
+            <div class="section-container">
+                <header class="section-header">
+                    <span class="section-number">04</span>
+                    <h2 class="section-title">Technical Stack</h2>
+                    <p class="section-subtitle">The tools I reach for when building</p>
+                </header>
+
+                <div class="stack-grid">
+                    <div class="stack-category">
+                        <div class="stack-category-header">
+                            <div class="stack-icon backend">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                    <line x1="8" y1="21" x2="16" y2="21"/>
+                                    <line x1="12" y1="17" x2="12" y2="21"/>
+                                </svg>
+                            </div>
+                            <h3>Backend</h3>
+                        </div>
+                        <ul class="stack-list">
+                            <li><span class="stack-item-name">Laravel</span><span class="stack-level">Expert</span></li>
+                            <li><span class="stack-item-name">PHP 8+</span><span class="stack-level">Expert</span></li>
+                            <li><span class="stack-item-name">MySQL</span><span class="stack-level">Advanced</span></li>
+                            <li><span class="stack-item-name">Redis</span><span class="stack-level">Advanced</span></li>
+                            <li><span class="stack-item-name">REST APIs</span><span class="stack-level">Expert</span></li>
+                            <li><span class="stack-item-name">API Design</span><span class="stack-level">Expert</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="stack-category">
+                        <div class="stack-category-header">
+                            <div class="stack-icon frontend">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                                    <polyline points="2 17 12 22 22 17"/>
+                                    <polyline points="2 12 12 17 22 12"/>
+                                </svg>
+                            </div>
+                            <h3>Frontend</h3>
+                        </div>
+                        <ul class="stack-list">
+                            <li><span class="stack-item-name">Tailwind CSS</span><span class="stack-level">Expert</span></li>
+                            <li><span class="stack-item-name">JavaScript</span><span class="stack-level">Advanced</span></li>
+                            <li><span class="stack-item-name">HTML5/CSS3</span><span class="stack-level">Expert</span></li>
+                            <li><span class="stack-item-name">Responsive Design</span><span class="stack-level">Expert</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="stack-category">
+                        <div class="stack-category-header">
+                            <div class="stack-icon devops">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                                </svg>
+                            </div>
+                            <h3>DevOps & Infrastructure</h3>
+                        </div>
+                        <ul class="stack-list">
+                            <li><span class="stack-item-name">Docker</span><span class="stack-level">Advanced</span></li>
+                            <li><span class="stack-item-name">Linux Servers</span><span class="stack-level">Expert</span></li>
+                            <li><span class="stack-item-name">Git</span><span class="stack-level">Expert</span></li>
+                            <li><span class="stack-item-name">CI/CD</span><span class="stack-level">Advanced</span></li>
+                            <li><span class="stack-item-name">Cloud Infrastructure</span><span class="stack-level">Advanced</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="stack-category">
+                        <div class="stack-category-header">
+                            <div class="stack-icon other">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                                </svg>
+                            </div>
+                            <h3>Other</h3>
+                        </div>
+                        <ul class="stack-list">
+                            <li><span class="stack-item-name">Domain Management</span><span class="stack-level">Expert</span></li>
+                            <li><span class="stack-item-name">DNS Configuration</span><span class="stack-level">Expert</span></li>
+                            <li><span class="stack-item-name">SSL/TLS</span><span class="stack-level">Expert</span></li>
+                            <li><span class="stack-item-name">GDPR Compliance</span><span class="stack-level">Advanced</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <div class="contact-card">
+                    <div class="contact-content">
+                        <header class="section-header">
+                            <span class="section-number">05</span>
+                            <h2 class="section-title">Let's Build Something</h2>
+                            <p class="section-subtitle">
+                                Currently open to full-time roles, freelance projects, 
+                                and interesting collaborations.
+                            </p>
+                        </header>
+
+                        <div class="contact-methods">
+                            <a href="mailto:f.ternis@xpsystems.eu" class="contact-method primary">
+                                <div class="method-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </div>
+                                <div class="method-info">
+                                    <span class="method-label">Email me directly</span>
+                                    <span class="method-value">f.ternis@xpsystems.eu</span>
+                                </div>
+                                <svg class="method-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                    <polyline points="12 5 19 12 12 19"/>
+                                </svg>
+                            </a>
+
+                            <a href="https://github.com/michaelninder" target="_blank" rel="noopener" class="contact-method">
+                                <div class="method-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </div>
+                                <div class="method-info">
+                                    <span class="method-label">View code</span>
+                                    <span class="method-value">github.com/michaelninder</span>
+                                </div>
+                                <svg class="method-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="contact-availability">
+                            <div class="availability-item">
+                                <span class="availability-status available"></span>
+                                <span>Full-time Positions</span>
+                            </div>
+                            <div class="availability-item">
+                                <span class="availability-status available"></span>
+                                <span>Freelance Projects</span>
+                            </div>
+                            <div class="availability-item">
+                                <span class="availability-status available"></span>
+                                <span>Remote-friendly</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section id="skills" class="py-20 px-4 bg-gray-100/50 dark:bg-slate-900/50">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-16 dark:text-white reveal-on-scroll">Skills & Technologies</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="skill-category bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 reveal-on-scroll">
-                    <div class="text-center mb-6">
-                        <i class="bi bi-server text-4xl text-blue-600 mb-4"></i>
-                        <h3 class="text-2xl font-bold dark:text-white">Backend</h3>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="skill-item dark:text-gray-300">PHP (Laravel)</div>
-                        <div class="skill-item dark:text-gray-300">MySQL</div>
-                        <div class="skill-item dark:text-gray-300">RESTful APIs</div>
-                        <div class="skill-item dark:text-gray-300">Docker</div>
-                        <div class="skill-item dark:text-gray-300">Linux</div>
-                    </div>
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <span class="footer-logo">pleasehireme.eu</span>
+                    <p class="footer-tagline">Built with Laravel, hosted with pride.</p>
                 </div>
-
-                <div class="skill-category bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 reveal-on-scroll">
-                    <div class="text-center mb-6">
-                        <i class="bi bi-palette text-4xl text-purple-600 mb-4"></i>
-                        <h3 class="text-2xl font-bold dark:text-white">Frontend</h3>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="skill-item dark:text-gray-300">HTML5, CSS3</div>
-                        <div class="skill-item dark:text-gray-300">JavaScript</div>
-                        <div class="skill-item dark:text-gray-300">Tailwind CSS</div>
-                        <div class="skill-item dark:text-gray-300">Bootstrap</div>
-                        <div class="skill-item dark:text-gray-300">Responsive Design</div>
-                    </div>
-                </div>
-
-                <div class="skill-category bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 reveal-on-scroll">
-                    <div class="text-center mb-6">
-                        <i class="bi bi-tools text-4xl text-green-600 mb-4"></i>
-                        <h3 class="text-2xl font-bold dark:text-white">Tools & DevOps</h3>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="skill-item dark:text-gray-300">Git</div>
-                        <div class="skill-item dark:text-gray-300">GitHub</div>
-                        <div class="skill-item dark:text-gray-300">AWS/Cloud Services</div>
-                        <div class="skill-item dark:text-gray-300">npm</div>
-                        <div class="skill-item dark:text-gray-300">Composer</div>
-                    </div>
+                <div class="footer-links">
+                    <button id="open-privacy" class="footer-link">Privacy Policy</button>
+                    <button id="open-imprint" class="footer-link">Imprint</button>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="py-20 px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-16 dark:text-white reveal-on-scroll">Featured Projects</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="project-card bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group reveal-on-scroll">
-                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="bi bi-cloud-arrow-up text-6xl text-white"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 dark:text-white">dsc.pics - Discord Image Host</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">Free, open-source image hosting for Discord. Sub-project of europehost.eu.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs rounded-full">Laravel</span>
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full">TailwindCSS</span>
-                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs rounded-full">S3</span>
-                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs rounded-full">RestAPI</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://dsc.pics" target="_blank" class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
-                                <i class="bi bi-eye"></i> Live
-                            </a>
-                            <a href="https://github.com/europehost/dsc.pics" target="_blank" class="text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
-                                <i class="bi bi-github"></i> Code
-                            </a>
-                            <a href="https://x.com/@dscdotpics" target="_blank" class="text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
-                                <i class="bi bi-twitter-x"></i> X
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group reveal-on-scroll">
-                    <div class="h-48 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="bi bi-google text-6xl text-white"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 dark:text-white">dsc.pics-Google-Chrome-Stats-Extension</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">Chrome extension utilizing the dsc.pics RestAPI for statistics.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs rounded-full">JavaScript</span>
-                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs rounded-full">RestAPI</span>
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full">Chrome API</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://chromewebstore.google.com/detail/dscpics-global-stats/hgfcfjggpadjoaedngakcghlimbibmjk" target="_blank" class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
-                                <i class="bi bi-eye"></i> Live
-                            </a>
-                            <a href="https://github.com/EuropeHost/dsc.pics-stats-extension" target="_blank" class="text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
-                                <i class="bi bi-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group reveal-on-scroll">
-                    <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="bi bi-file-earmark-code text-6xl text-white"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 dark:text-white">gimy.site - Static Website Host</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">Free static website hosting (HTML, CSS, JS, Media). Sub-project of mtex.dev.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs rounded-full">Laravel</span>
-                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs rounded-full">AWS S3</span>
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full">MySQL</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://gimy.site" target="_blank" class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
-                                <i class="bi bi-eye"></i> Live
-                            </a>
-                            <a href="https://github.com/MTEX-dev/gimy-site" target="_blank" class="text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
-                                <i class="bi bi-github"></i> Code
-                            </a>
-                            <a href="https://x.com/@gimydotsite" target="_blank" class="text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
-                                <i class="bi bi-twitter-x"></i> X
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group reveal-on-scroll">
-                    <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="bi bi-person-lines-fill text-6xl text-white"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 dark:text-white">getmy.name - Portfolio API</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">Free portfolio API for developers. Sub-project of mtex.dev.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs rounded-full">Laravel</span>
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full">MySQL</span>
-                            <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">RESTful</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://getmy.name" target="_blank" class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
-                                <i class="bi bi-eye"></i> Live
-                            </a>
-                            <a href="https://github.com/mtex-dev/getmy.name" target="_blank" class="text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
-                                <i class="bi bi-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group reveal-on-scroll">
-                    <div class="h-48 bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="bi bi-newspaper text-6xl text-white"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 dark:text-white">getmy.blog - Blog API</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">Free blog API for developers. Sub-project of mtex.dev.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs rounded-full">Laravel</span>
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full">MySQL</span>
-                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs rounded-full">RESTful</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://getmy.blog" target="_blank" class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
-                                <i class="bi bi-eye"></i> Live
-                            </a>
-                            <a href="https://github.com/mtex-dev/getmy.blog" target="_blank" class="text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
-                                <i class="bi bi-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group reveal-on-scroll">
-                    <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="bi bi-tools text-6xl text-white"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 dark:text-white">getmy.blog-maintenance</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">Maintenance page for getmy.blog while under rework. Sub-project of mtex.dev.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full">HTML</span>
-                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs rounded-full">CSS</span>
-                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs rounded-full">JavaScript</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://getmy.blog" target="_blank" class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
-                                <i class="bi bi-eye"></i> Live
-                            </a>
-                            <a href="https://github.com/mtex-dev/getmy.blog-under-construction" target="_blank" class="text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
-                                <i class="bi bi-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group reveal-on-scroll">
-                    <div class="h-48 bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="bi bi-brightness-high text-6xl text-white"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 dark:text-white">betterbreeze - Laravel Starter Kit</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">An enhanced Laravel Breeze starter kit with better layout and file structure.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs rounded-full">Laravel</span>
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full">TailwindCSS</span>
-                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs rounded-full">PHP</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/michaelninder/betterbreeze" target="_blank" class="text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
-                                <i class="bi bi-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group reveal-on-scroll">
-                    <div class="h-48 bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="bi bi-cloud text-6xl text-white"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 dark:text-white">Cloud - Laravel-based Cloud System</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">A Laravel 12 cloud system with tagging features (not yet completed).</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs rounded-full">Laravel 12</span>
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full">Storage API</span>
-                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs rounded-full">PHP</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 cursor-not-allowed">
-                                <i class="bi bi-eye"></i> Live (Soon)
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group reveal-on-scroll">
-                    <div class="h-48 bg-gradient-to-br from-yellow-500 to-yellow-700 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="bi bi-code-square text-6xl text-white"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 dark:text-white">Simple PHP Website for Beginners</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">A straightforward PHP website for learning web development basics.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs rounded-full">PHP</span>
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full">HTML</span>
-                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs rounded-full">CSS</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/XP-Craft/simple-php-web" target="_blank" class="text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
-                                <i class="bi bi-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group reveal-on-scroll">
-                    <div class="h-48 bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="bi bi-person-bounding-box text-6xl text-white"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 dark:text-white">fternis.de - Personal Portfolio</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">My personal portfolio website (not yet powered by getmy.name).</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs rounded-full">Laravel</span>
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full">TailwindCSS</span>
-                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs rounded-full">PHP</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://fternis.de" target="_blank" class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
-                                <i class="bi bi-eye"></i> Live
-                            </a>
-                            <a href="https://github.com/Michaelninder/portfolio" target="_blank" class="text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
-                                <i class="bi bi-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group reveal-on-scroll">
-                    <div class="h-48 bg-gradient-to-br from-pink-500 to-pink-700 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="bi bi-journal-code text-6xl text-white"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 dark:text-white">Code Snippets Collection</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">A repository of useful code snippets, including a scroll-to-top button.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-900/30 text-gray-600 dark:text-gray-400 text-xs rounded-full">JavaScript</span>
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full">CSS</span>
-                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs rounded-full">HTML</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/Michaelninder/code-snippets" target="_blank" class="text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
-                                <i class="bi bi-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group reveal-on-scroll">
-                    <div class="h-48 bg-gradient-to-br from-gray-500 to-gray-700 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="bi bi-tools text-6xl text-white opacity-70"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 dark:text-white">mtex.dev - Developer Platform</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">The developer platform currently under rework.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs rounded-full">Laravel</span>
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full">TailwindCSS</span>
-                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs rounded-full">PHP</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://mtex.dev" target="_blank" class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
-                                <i class="bi bi-eye"></i> Live
-                            </a>
-                            <a href="https://github.com/MTEX-dev" target="_blank" class="text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">
-                                <i class="bi bi-github"></i> Code (Org)
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group reveal-on-scroll">
-                    <div class="h-48 bg-gradient-to-br from-amber-500 to-orange-700 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="bi bi-journals text-6xl text-white"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 dark:text-white">MoodFood - Recipe Management System</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">A comprehensive Laravel-based system for managing recipes.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs rounded-full">Laravel</span>
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full">TailwindCSS</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://moodfood.hhgkl.de" target="_blank" class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
-                                <i class="bi bi-eye"></i> Live
-                            </a>
-                            <a href="#" class="text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 cursor-not-allowed">
-                                <i class="bi bi-github"></i> Code (Private)
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group reveal-on-scroll">
-                    <div class="h-48 bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="bi bi-code-slash text-6xl text-white opacity-70"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 dark:text-white">More Projects In Progress...</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">Always working on new and exciting Laravel applications and web solutions!</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs rounded-full">Laravel</span>
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full">PHP</span>
-                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-900/30 text-gray-600 dark:text-gray-400 text-xs rounded-full">And More!</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <span class="text-gray-600 dark:text-gray-400 cursor-default">
-                                <i class="bi bi-info-circle"></i> Stay Tuned!
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-20 px-4 bg-gray-100/50 dark:bg-slate-900/50">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-16 dark:text-white reveal-on-scroll">Let's Connect</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="reveal-on-scroll">
-                    <h3 class="text-2xl font-bold mb-6 dark:text-white">Get In Touch</h3>
-                    <div class="space-y-4">
-                        <a href="mailto:f.ternis@xpsystems.eu" class="flex items-center p-4 bg-white dark:bg-slate-800 rounded-xl hover:shadow-lg transition-all duration-300">
-                            <i class="bi bi-envelope text-2xl text-blue-600 mr-4"></i>
-                            <span class="dark:text-gray-300">f.ternis@xpsystems.eu</span>
-                        </a>
-                        <a href="https://github.com/michaelninder" class="flex items-center p-4 bg-white dark:bg-slate-800 rounded-xl hover:shadow-lg transition-all duration-300">
-                            <i class="bi bi-github text-2xl text-gray-700 dark:text-gray-300 mr-4"></i>
-                            <span class="dark:text-gray-300">github.com/michaelninder</span>
-                        </a>
-                        <a href="https://fternis.de" class="flex items-center p-4 bg-white dark:bg-slate-800 rounded-xl hover:shadow-lg transition-all duration-300">
-                            <i class="bi bi-globe text-2xl text-green-600 mr-4"></i>
-                            <span class="dark:text-gray-300">fternis.de</span>
-                        </a>
-                        <a href="https://fabianternis.de" class="flex items-center p-4 bg-white dark:bg-slate-800 rounded-xl hover:shadow-lg transition-all duration-300">
-                            <i class="bi bi-globe text-2xl text-purple-600 mr-4"></i>
-                            <span class="dark:text-gray-300">fabianternis.de</span>
-                        </a>
-                        <a href="https://x.com/@micha_was_taken" class="flex items-center p-4 bg-white dark:bg-slate-800 rounded-xl hover:shadow-lg transition-all duration-300">
-                            <i class="bi bi-twitter-x text-2xl text-gray-700 dark:text-gray-300 mr-4"></i>
-                            <span class="dark:text-gray-300">@micha_was_taken</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="reveal-on-scroll">
-                    <h3 class="text-2xl font-bold mb-6 dark:text-white">Send a Message</h3>
-                    <form class="space-y-4">
-                        <div class="text-center text-gray-600 dark:text-gray-400 p-4 border border-blue-300 dark:border-blue-700 rounded-xl bg-blue-50 dark:bg-blue-900/20">
-                            Contact form is temporarily disabled. Please use the direct links on the left to get in touch!
-                        </div>
-                        <input type="text" placeholder="Your Name" class="w-full p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" disabled>
-                        <input type="email" placeholder="Your Email" class="w-full p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" disabled>
-                        <input type="text" placeholder="Subject" class="w-full p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" disabled>
-                        <textarea rows="6" placeholder="Your Message" class="w-full p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none" disabled></textarea>
-                        <button type="submit" class="w-full px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-all duration-300 hover:shadow-lg opacity-50 cursor-not-allowed" disabled>
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-8 px-4 bg-white dark:bg-slate-800 border-t border-gray-200 dark:border-slate-700">
-        <div class="max-w-6xl mx-auto text-center">
-            <p class="text-gray-600 dark:text-gray-400 mb-4">&copy; 2025 Fabian Ternis. All rights reserved.</p>
-            <div class="flex justify-center space-x-6 text-sm">
-                <button id="open-privacy" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">Privacy Policy</button>
-                <button id="open-imprint" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">Imprint</button>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Fabian Ternis. All rights reserved.</p>
+                <p class="footer-location">Rheinland-Pfalz, Germany</p>
             </div>
         </div>
     </footer>
 
-    <div id="privacyPolicyModal" class="modal-overlay hidden fixed inset-0 bg-black bg-opacity-50 dark:bg-opacity-70 backdrop-blur-sm z-[100] flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
-        <div class="modal-content relative bg-white dark:bg-slate-800 rounded-lg shadow-xl w-11/12 max-w-lg max-h-[90vh] overflow-y-auto p-8 transform transition-transform duration-300 scale-95">
-            <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Privacy Policy</h3>
-            <div class="text-left text-gray-700 dark:text-gray-300">
-                <p class="mb-4">Welcome to my personal portfolio website. Your privacy is a priority for me.</p>
-                <h4 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">1. Data Collection</h4>
-                <p class="mb-4">This website is designed to be as privacy-friendly as possible. I do not actively collect any personal data from visitors. There are no tracking cookies, analytics that store personal information, or third-party advertising scripts.</p>
+    <div id="modal-overlay"></div>
 
-                <h4 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">2. Theme Preference</h4>
-                <p class="mb-4">The only information stored locally in your browser is your theme preference (dark or light mode). This is saved in your browser's local storage and is solely used to remember your choice for a consistent user experience. This preference is not transmitted to my server or any third party.</p>
-
-                <h4 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">3. External Links</h4>
-                <p class="mb-4">My website contains links to external websites (e.g., GitHub, X, etc.). Please be aware that I am not responsible for the privacy practices of these other sites. I encourage you to read the privacy statements of any other site that collects personally identifiable information.</p>
-
-                <h4 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">4. Changes to this Policy</h4>
-                <p class="mb-4">I may update this privacy policy from time to time. Any changes will be posted on this page. You are advised to review this Privacy Policy periodically for any changes.</p>
-
-                <h4 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">5. Contact</h4>
-                <p>If you have any questions about this privacy policy, please contact me at f.ternis@xpsystems.eu.</p>
-            </div>
-            <button id="close-privacy" class="popover-close-btn">Close</button>
+    <div id="privacy-modal" class="modal">
+        <div class="modal-header">
+            <h3>Privacy Policy</h3>
+            <button class="modal-close" data-close="privacy-modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <div class="modal-content">
+            <p><strong>Your privacy matters.</strong></p>
+            <p>This site is designed with privacy in mind:</p>
+            <ul>
+                <li>We store only your theme preference locally</li>
+                <li>No tracking cookies</li>
+                <li>No analytics</li>
+                <li>No third-party data sharing</li>
+            </ul>
+            <p>Built in Germany, hosted in Europe, GDPR-compliant by design.</p>
         </div>
     </div>
 
-    <div id="imprintModal" class="modal-overlay hidden fixed inset-0 bg-black bg-opacity-50 dark:bg-opacity-70 backdrop-blur-sm z-[100] flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
-        <div class="modal-content relative bg-white dark:bg-slate-800 rounded-lg shadow-xl w-11/12 max-w-lg max-h-[90vh] overflow-y-auto p-8 transform transition-transform duration-300 scale-95">
-            <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Imprint</h3>
-            <div class="text-left text-gray-700 dark:text-gray-300">
-                <h4 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Information according to § 5 TMG</h4>
-                <p class="mb-2 font-bold">Fabian Ternis</p>
-                <p class="mb-2">Alzeyer Str. 97</p>
-                <p class="mb-4">67592 Floersheim-Dalsheim</p>
-                <p class="mb-2">Germany</p>
-
-                <h4 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Contact:</h4>
-                <p class="mb-2">Email: f.ternis@xpsystems.eu</p>
-                <p class="mb-4">Phone: Available upon request</p>
-
-                <h4 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Responsible for content according to § 55 Abs. 2 RStV:</h4>
-                <p class="mb-4">Fabian Ternis</p>
-            </div>
-            <button id="close-imprint" class="popover-close-btn">Close</button>
+    <div id="imprint-modal" class="modal">
+        <div class="modal-header">
+            <h3>Imprint / Impressum</h3>
+            <button class="modal-close" data-close="imprint-modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <div class="modal-content">
+            <address>
+                <strong>Fabian Ternis</strong><br>
+                Alzeyer Str. 97<br>
+                67592 Floersheim-Dalsheim<br>
+                Germany
+            </address>
+            <p class="modal-contact">
+                Email: <a href="mailto:f.ternis@xpsystems.eu">f.ternis@xpsystems.eu</a>
+            </p>
         </div>
     </div>
 
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const html = document.documentElement;
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navbar = document.getElementById('navbar');
+    <button id="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="19" x2="12" y2="5"/>
+            <polyline points="5 12 12 5 19 12"/>
+        </svg>
+    </button>
 
-        function setTheme(theme) {
-            if (theme === 'dark') {
-                html.classList.add('dark');
-                themeToggle.classList.add('dark:border-blue-700');
-            } else {
-                html.classList.remove('dark');
-                themeToggle.classList.remove('dark:border-blue-700');
-            }
-            localStorage.setItem('theme', theme);
-        }
-
-        function getTheme() {
-            return localStorage.getItem('theme') || 'dark';
-        }
-
-        setTheme(getTheme());
-
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = getTheme();
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            setTheme(newTheme);
-        });
-
-        mobileMenuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('-translate-x-full');
-            document.body.classList.toggle('overflow-hidden');
-        });
-
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('-translate-x-full');
-                document.body.classList.remove('overflow-hidden');
-            });
-        });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        function updateActiveNavLink() {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-            let currentSection = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 150;
-                const sectionHeight = section.offsetHeight;
-                if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active', 'bg-blue-600', 'text-white');
-                link.classList.add('text-gray-700', 'dark:text-gray-300');
-                if (link.getAttribute('href') === `#${currentSection}`) {
-                    link.classList.add('active', 'bg-blue-600', 'text-white');
-                    link.classList.remove('text-gray-700', 'dark:text-gray-300');
-                }
-            });
-
-            mobileNavLinks.forEach(link => {
-                link.classList.remove('text-blue-600', 'dark:text-blue-400');
-                link.classList.add('dark:text-gray-200');
-                if (link.getAttribute('href') === `#${currentSection}`) {
-                    link.classList.add('text-blue-600', 'dark:text-blue-400');
-                }
-            });
-        }
-
-        function handleNavbarTransparency() {
-            if (window.scrollY === 0) {
-                navbar.classList.add('bg-transparent', 'shadow-none', 'border-transparent');
-                navbar.classList.remove('backdrop-blur-md', 'bg-white/80', 'dark:bg-slate-900/80', 'shadow-lg', 'border-gray-200/50', 'dark:border-slate-700/50');
-            } else {
-                navbar.classList.remove('bg-transparent', 'shadow-none', 'border-transparent');
-                navbar.classList.add('backdrop-blur-md', 'bg-white/80', 'dark:bg-slate-900/80', 'shadow-lg', 'border-gray-200/50', 'dark:border-slate-700/50');
-            }
-        }
-
-        window.addEventListener('scroll', () => {
-            updateActiveNavLink();
-            handleNavbarTransparency();
-        });
-        window.addEventListener('load', () => {
-            updateActiveNavLink();
-            handleNavbarTransparency();
-        });
-
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            rootMargin: '0px 0px -10% 0px',
-            threshold: 0.1
-        });
-
-        document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
-            revealObserver.observe(el);
-        });
-
-        const openPrivacyBtn = document.getElementById('open-privacy');
-        const closePrivacyBtn = document.getElementById('close-privacy');
-        const privacyModal = document.getElementById('privacyPolicyModal');
-
-        const openImprintBtn = document.getElementById('open-imprint');
-        const closeImprintBtn = document.getElementById('close-imprint');
-        const imprintModal = document.getElementById('imprintModal');
-
-        function openModal(modal) {
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.add('opacity-100');
-                modal.querySelector('.modal-content').classList.remove('scale-95');
-                modal.querySelector('.modal-content').classList.add('scale-100');
-            }, 10);
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal(modal) {
-            modal.classList.remove('opacity-100');
-            modal.querySelector('.modal-content').classList.remove('scale-100');
-            modal.querySelector('.modal-content').classList.add('scale-95');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                document.body.style.overflow = '';
-            }, 300);
-        }
-
-        openPrivacyBtn.addEventListener('click', () => openModal(privacyModal));
-        closePrivacyBtn.addEventListener('click', () => closeModal(privacyModal));
-        privacyModal.addEventListener('click', (e) => {
-            if (e.target === privacyModal) {
-                closeModal(privacyModal);
-            }
-        });
-
-        openImprintBtn.addEventListener('click', () => openModal(imprintModal));
-        closeImprintBtn.addEventListener('click', () => closeModal(imprintModal));
-        imprintModal.addEventListener('click', (e) => {
-            if (e.target === imprintModal) {
-                closeModal(imprintModal);
-            }
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                if (!privacyModal.classList.contains('hidden')) closeModal(privacyModal);
-                if (!imprintModal.classList.contains('hidden')) closeModal(imprintModal);
-            }
-        });
-    </script>
-
-    <style>
-        .reveal-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            will-change: opacity, transform;
-        }
-
-        .reveal-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .skill-item {
-            @apply px-4 py-2 bg-gray-100 dark:bg-slate-700 rounded-lg text-sm font-medium;
-        }
-
-        .nav-link {
-            color: var(--tw-text-opacity);
-        }
-
-        .nav-link.active {
-            @apply bg-blue-600 text-white;
-        }
-        .nav-link:hover {
-            color: black;
-        }
-        .dark .nav-link:hover {
-            color: white;
-        }
-
-        .nav-link.active:hover {
-            @apply text-white;
-        }
-
-        .project-card {
-            transform: translateY(0);
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-        }
-
-        @media (max-width: 639px) {
-            #navbar {
-                border-radius: 0;
-                top: 0;
-                transform: none;
-            }
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .modal-overlay.opacity-0 {
-            opacity: 0;
-        }
-        .modal-overlay.opacity-100 {
-            opacity: 1;
-        }
-        .modal-content.scale-95 {
-            transform: translate(-50%, -50%) scale(0.95);
-        }
-        .modal-content.scale-100 {
-            transform: translate(-50%, -50%) scale(1);
-        }
-        .modal-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .popover-close-btn {
-            @apply mt-6 px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-all duration-300;
-        }
-    </style>
+    <script src="script.js"></script>
 </body>
 </html>
