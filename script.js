@@ -1,3 +1,4 @@
+const doc = document.documentElement;
 const body = document.body;
 const themeToggle = document.getElementById('theme-toggle');
 const mobileToggle = document.getElementById('mobile-menu-toggle');
@@ -5,58 +6,51 @@ const mobileMenu = document.getElementById('mobile-menu');
 const overlay = document.getElementById('modal-overlay');
 const btt = document.getElementById('back-to-top');
 
-const toggleTheme = () => {
-    body.classList.toggle('light-mode');
-    const mode = body.classList.contains('light-mode') ? 'light' : 'dark';
-    localStorage.setItem('portfolio-theme', mode);
+const applyTheme = (theme) => {
+    theme === 'light' ? body.classList.add('light-mode') : body.classList.remove('light-mode');
+    localStorage.setItem('hire-theme', theme);
 };
 
-if (localStorage.getItem('portfolio-theme') === 'light') {
-    body.classList.add('light-mode');
-}
+if (localStorage.getItem('hire-theme') === 'light') applyTheme('light');
 
-themeToggle.onclick = toggleTheme;
+themeToggle.addEventListener('click', () => {
+    const isLight = body.classList.contains('light-mode');
+    applyTheme(isLight ? 'dark' : 'light');
+});
 
 mobileToggle.onclick = () => {
     mobileMenu.classList.toggle('active');
-    mobileToggle.innerHTML = mobileMenu.classList.contains('active') ? '✕' : '☰';
+    mobileToggle.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
 };
 
-window.onclick = (e) => {
-    if (e.target === overlay) closeAllModals();
+const manageModal = (id, action) => {
+    const modal = document.getElementById(id);
+    modal.style.display = action === 'open' ? 'block' : 'none';
+    overlay.style.display = action === 'open' ? 'block' : 'none';
+    body.style.overflow = action === 'open' ? 'hidden' : 'auto';
 };
 
-const openModal = (id) => {
-    document.getElementById(id).classList.add('active');
-    overlay.style.display = 'block';
-    body.style.overflow = 'hidden';
-};
+document.getElementById('open-privacy').onclick = () => manageModal('privacyPolicyModal', 'open');
+document.getElementById('open-imprint').onclick = () => manageModal('imprintModal', 'open');
+document.getElementById('close-privacy').onclick = () => manageModal('privacyPolicyModal', 'close');
+document.getElementById('close-imprint').onclick = () => manageModal('imprintModal', 'close');
 
-const closeAllModals = () => {
-    document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
+overlay.onclick = () => {
+    document.querySelectorAll('.modal').forEach(m => m.style.display = 'none');
     overlay.style.display = 'none';
     body.style.overflow = 'auto';
 };
 
-document.getElementById('open-privacy').onclick = () => openModal('privacyPolicyModal');
-document.getElementById('open-imprint').onclick = () => openModal('imprintModal');
-document.getElementById('close-privacy').onclick = closeAllModals;
-document.getElementById('close-imprint').onclick = closeAllModals;
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
+const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
     });
-}, { threshold: 0.1 });
+}, { threshold: 0.15 });
 
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal').forEach(section => scrollObserver.observe(section));
 
 window.onscroll = () => {
-    if (window.scrollY > 500) {
-        btt.style.display = 'block';
-    } else {
-        btt.style.display = 'none';
-    }
+    btt.style.display = window.scrollY > 800 ? 'block' : 'none';
 };
 
 btt.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -64,12 +58,10 @@ btt.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 document.querySelectorAll('#mobile-menu a').forEach(link => {
     link.onclick = () => {
         mobileMenu.classList.remove('active');
-        mobileToggle.innerHTML = '☰';
+        mobileToggle.textContent = '☰';
     };
 });
 
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeAllModals();
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') overlay.click();
 });
-
-console.log('Portfolio initialized.');
